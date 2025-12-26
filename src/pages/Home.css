@@ -1,0 +1,976 @@
+/* ============================================================
+   🌐 GLOBAL RESET + BASE — START
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 🌐 GLOBAL RESET — END
+============================================================ */
+
+
+
+/* ============================================================
+   🔘 GLOBAL BUTTON STYLES — START
+============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--blue);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #222;
+  color: #222;
+}
+
+.btn-outline:hover {
+  background: #222;
+  color: #fff;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: #ffffff22;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+}
+/* 🔘 GLOBAL BUTTONS — END
+============================================================ */
+
+
+
+/* ============================================================
+   🏠 HERO SECTION — START
+============================================================ */
+.hero {
+  background-color: var(--blue);
+  color: white;
+  padding: 100px 60px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+.hero-left {
+  max-width: 650px;
+}
+
+.hero-badge-red {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero-title-new {
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.hero-highlight-red {
+  color: var(--red);
+  display: block;
+}
+
+.hero-desc-new {
+  margin: 25px 0 35px;
+  font-size: 20px;
+  color: #e8e8e8;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.red-btn {
+  background: var(--red);
+  color: #fff;
+}
+
+.red-btn:hover {
+  background: var(--red);
+}
+
+.green-btn {
+  background: #2dcc71;
+  color: #fff;
+}
+
+.green-btn:hover {
+  background: #25b863;
+}
+
+/* RIGHT SIDE TRUST CARDS */
+.hero-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.trust-card-new {
+  background: #ffffff0f;
+  border: 1px solid #ffffff22;
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trust-icon-new {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  background: #ffffff22;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.trust-card-new h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.trust-card-new p {
+  font-size: 14px;
+  color: #dcdcdc;
+}
+/* 🏠 HERO SECTION — END
+============================================================ */
+
+
+
+/* ============================================================
+   🏥 ABOUT SECTION — START
+============================================================ */
+.about {
+  padding: 90px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f4f8ff);
+}
+
+.about-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-badge {
+  display: inline-block;
+  background: #ffe8e8;
+  color: var(--red);
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.about-title {
+  font-size: 46px;
+  color: var(--blue);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.about-subtext,
+.about-desc {
+  font-size: 16px;
+  color: #4e4e4e;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 650px;
+}
+
+.about-points {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.point-new {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.point-icon-new {
+  color: var(--red);
+}
+
+.about-btn {
+  border: 2px solid var(--blue);
+  background: white;
+  padding: 12px 26px;
+  border-radius: 10px;
+  color: var(--blue);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background:var(--blue);
+  color: white;
+}
+
+/* Right Image */
+.about-image-box-new {
+  position: relative;
+}
+
+.about-image-new {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px #00000015;
+}
+
+/* Badge */
+.experience-card-new {
+  position: absolute;
+  bottom: -25px;
+  right: -20px;
+  background: var(--red);
+  padding: 22px 30px;
+  border-radius: 18px;
+  color: white;
+  box-shadow: 0 8px 20px #e6000044;
+}
+
+.experience-card-new h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.experience-card-new p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+/* 🏥 ABOUT SECTION — END
+============================================================ */
+
+/* hospitals section starts */
+.hospitals-section {
+  padding: 110px 20px;
+  text-align: center;
+  background: #f9fbfd;
+}
+
+/* BADGE */
+.hospitals-badge {
+  display: inline-block;
+  background: #fdecec;
+  color: #d60000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+.hospitals-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: #0f1f38;
+  margin-bottom: 12px;
+}
+
+/* SUBTITLE */
+.hospitals-subtitle {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  font-size: 18px;
+  color: #4a638a;
+  line-height: 1.6;
+}
+
+/* GRID */
+.hospitals-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.hospital-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 24px 36px;
+  border: 1px solid #e6ecf5;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.hospital-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hospital-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.hospital-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1f38;
+  margin-bottom: 6px;
+}
+
+.hospital-specialty {
+  color: #d60000;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.hospital-location {
+  color: #4a638a;
+  font-size: 14px;
+}
+
+/* CTA BUTTON */
+.hospitals-cta {
+  margin-top: 60px;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #d60000;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #b50000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .hospitals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hospitals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hospitals-title {
+    font-size: 32px;
+  }
+}
+
+
+
+/* hospital section end */
+
+/* ============================================================
+   💉 TREATMENTS SECTION — START
+============================================================ */
+.treatments {
+  background: #f6f9fc;
+  padding: 80px 20px;
+}
+
+.treatment-container {
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+}
+
+.treat-badge {
+  display: inline-block;
+  background: #ffe8e8;
+  color: var(--red) !important;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.treat-title {
+  font-size: 42px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.treat-subtext {
+  color: #5c6f8a;
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.treat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
+
+.treat-card {
+  background: white;
+  padding: 35px 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #00000010;
+  border: 1px solid #eaeaea;
+  transition: 0.3s ease;
+}
+
+.treat-card:hover {
+  transform: translateY(-4px);
+}
+
+.treat-icon-wrap {
+  background: #ffecec;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.treat-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+  color: var(--blue);
+}
+/* 💉 TREATMENTS SECTION — END
+============================================================ */
+/* ==================doctors section star====================== */
+.doctors-section {
+  padding: 110px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* BADGE */
+.doctors-badge {
+  display: inline-block;
+  background: #fdecec;
+  color: #d60000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+.doctors-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+/* SUBTITLE */
+.doctors-subtitle {
+  max-width: 720px;
+  margin: 0 auto 70px;
+  font-size: 18px;
+  color: #4a638a;
+  line-height: 1.6;
+}
+
+/* GRID */
+.doctors-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.doctor-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 24px;
+  border: 1px solid #e6ecf5;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.doctor-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  padding: 5px;
+  background: #fdecec;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+/* TEXT */
+.doctor-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1f38;
+  margin-bottom: 6px;
+}
+
+.doctor-specialty {
+  color: #d60000;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.doctor-hospital {
+  color: #4a638a;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+/* EXPERIENCE */
+.doctor-exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #4a638a;
+  font-size: 14px;
+}
+
+.doctor-exp svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* FOOTER TEXT */
+.doctors-footer {
+  margin-top: 60px;
+  font-size: 16px;
+  color: #4a638a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors-title {
+    font-size: 32px;
+  }
+}
+
+/* ============================================================
+   ⭐ doctors section end
+============================================================ */
+
+/* ============================================================
+   ⭐ WHY CHOOSE US — START
+============================================================ */
+.why-choose {
+  background: var(--blue);
+  padding: 100px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.choose-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.choose-badge {
+  background: #2b4a72;
+  padding: 10px 24px;
+  border-radius: 25px;
+  margin-bottom: 108px !important;
+}
+
+.choose-title {
+  padding-top: 25px;
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.choose-card {
+  background: #28486d;
+  padding: 30px 28px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.choose-icon {
+  color: var(--red);
+}
+/* ⭐ WHY CHOOSE US — END
+============================================================ */
+
+
+
+
+
+
+
+/* ============================================================
+   📣 FINAL CTA — START
+============================================================ */
+.cta {
+  padding: 60px 20px;
+  background: #ffd54f;
+  text-align: center;
+}
+
+.cta-btn-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* 📣 FINAL CTA — END
+============================================================ */
+
+
+
+/* ============================================================
+   🔄 PROCESS CTA SECTION — START
+============================================================ */
+.cta-wrapper {
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-box {
+  width: 100%;
+  max-width: 1100px;
+  background: var(--blue);
+  padding: 40px 50px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.cta-btn {
+  background: var(--red);
+  color: #ffff;
+}
+/* 🔄 PROCESS CTA — END
+============================================================ */
+
+
+
+/* ============================================================
+   🌍 ADVANTAGES SECTION — START
+============================================================ */
+.advantages-section {
+  text-align: center;
+  padding: 70px 40px;
+  background: #f8fbff;
+}
+
+.tag {
+  background: #fdecee;
+  color: var(--red);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #60738c;
+  margin-bottom: 50px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 16px !important;
+  text-align: left;
+  border: 1px solid #e6edf5;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: #fdecee;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--red);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 15px;
+  color: #5f7184;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🌍 ADVANTAGES SECTION — END
+============================================================ */
+/* start cta */
+
+/* ================= NEW BLUE CTA SECTION ================= */
+
+.blue-cta-section {
+  background-color: var(--blue); /* 🔵 Blue Background */
+  text-align: center;
+  padding: 70px 20px;
+  color: #fff;
+  width: 100%;
+}
+
+.blue-cta-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blue-cta-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.blue-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* LEFT OUTLINE BUTTON */
+.blue-btn-outline {
+  background-color: var(--red);
+  border: 1px solid #ffffff;
+  padding: 12px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.blue-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* WHATSAPP BUTTON */
+.blue-btn-whatsapp {
+  background-color: #25d366;
+  padding: 12px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.blue-btn-whatsapp:hover {
+  background-color: #1eb85a;
+}
+
+
+/* end cta */
+
+/* ============================================================
+   📱 RESPONSIVE — START
+============================================================ */
+@media (max-width: 992px) {
+  .hero,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title-new {
+    font-size: 32px;
+  }
+
+  .treat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .choose-grid,
+  .testimonials-grid,
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+}
+/* 📱 RESPONSIVE — END
+============================================================ */

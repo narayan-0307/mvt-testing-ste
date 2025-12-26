@@ -1,0 +1,18 @@
+/* HERO */
+.contact-hero {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.contact-hero h1 {
+  font-size: 46px;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}

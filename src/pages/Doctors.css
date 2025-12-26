@@ -1,0 +1,143 @@
+/* .doctors-hero {
+  background: #ffffff;
+  text-align: center;
+  padding: 120px 20px 90px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(214, 0, 0, 0.12);
+  color: var(--red);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.doctors-hero h1 {
+  font-size: 46px;
+  color: #0b1b4b;
+  margin-bottom: 14px;
+}
+
+.doctors-hero p {
+  font-size: 18px;
+  color: #4a638a;
+} */
+/* HERO */
+.doctors-hero {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.doctors-hero h1 {
+  font-size: 46px;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.doctors-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+/* SECTION */
+.doctors-section {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+/* GRID */
+.doctors-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.doctor-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 38px 26px;
+  text-align: center;
+  border: 1px solid #e6ecf5;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.doctor-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 6px;
+  background: rgba(214, 0, 0, 0.15);
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.doctor-card h3 {
+  font-size: 18px;
+  color: #0f1f38;
+  margin-bottom: 6px;
+}
+
+.specialty {
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.hospital {
+  color: #4a638a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #4a638a;
+}
+
+.experience svg {
+  width: 16px;
+}
+
+/* FOOTER */
+.doctors-footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 15px;
+  color: #4a638a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors-hero h1 {
+    font-size: 32px;
+  }
+}

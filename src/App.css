@@ -1,0 +1,24 @@
+:root {
+  /* Brand Colors */
+  --blue: #0a1754;
+  --red: #d90000;
+  --light-red: #ffebeb;
+
+  /* Font */
+  --font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   GLOBAL RESET + BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--text-dark);
+  line-height: 1.6;
+}
