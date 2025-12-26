@@ -5,13 +5,13 @@ export default function ContactSection() {
   return (
     <section className="contact-wrapper">
       <div className="contact-grid">
-
         {/* LEFT SIDE */}
         <div className="contact-left">
           <h2 className="contact-title">Contact Us</h2>
           <p className="contact-desc">
             For non-emergency inquiries, quotes, or questions, please use the
-            form. For immediate medical emergencies, call our 24/7 dispatch line.
+            form. For immediate medical emergencies, call our 24/7 dispatch
+            line.
           </p>
 
           {/* Emergency Card */}
@@ -19,7 +19,7 @@ export default function ContactSection() {
             <Phone className="contact-icon red" />
             <div>
               <h4>Emergency 24/7</h4>
-              <p>+919820073734</p>
+              <p>+91 86558 35979</p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@ export default function ContactSection() {
             <Mail className="contact-icon blue" />
             <div>
               <h4>General Inquiries</h4>
-              <p>ops.humancareworldwide.com</p>
+              <p>medicaltourism@humancareworldwide.com</p>
             </div>
           </div>
 
@@ -57,7 +57,6 @@ export default function ContactSection() {
         {/* RIGHT SIDE FORM */}
         <div className="contact-right">
           <form className="contact-form">
-
             <input type="text" placeholder="Your Name" required />
 
             <input type="text" placeholder="Your Phone Number" required />
@@ -77,7 +76,6 @@ export default function ContactSection() {
             <button type="submit" className="submit-btn">
               Send Request
             </button>
-
           </form>
         </div>
       </div>
