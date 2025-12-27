@@ -28,7 +28,7 @@ export default function ContactSection() {
             <MessageCircle className="contact-icon green" />
             <div>
               <h4>Whatsapp Us</h4>
-              <p>+919820073734</p>
+              <p>+91 86558 35979</p>
             </div>
           </div>
 

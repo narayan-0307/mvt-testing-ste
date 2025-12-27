@@ -12,15 +12,7 @@ import {
 import "./Footer.css";
 
 export default function Footer({ onNavigate }) {
-  const treatments = [
-    "Heart Surgery",
-    "Bone & Joint",
-    "Neurology",
-    "Cancer Treatment",
-    "IVF & Fertility",
-    "Dental Treatment",
-    "Cosmetic Surgery",
-  ];
+
 
   return (
     <footer className="footer">
@@ -28,11 +20,11 @@ export default function Footer({ onNavigate }) {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <div className="footer-icon">
+              {/* <div className="footer-icon">
                 <Phone size={20} />
-              </div>
+              </div> */}
               <div>
-                <h3>HumanCare MVT</h3>
+                <h3>Humancare World Wide</h3>
                 <p>Medical Value Travel</p>
               </div>
             </div>
@@ -43,34 +35,39 @@ export default function Footer({ onNavigate }) {
               patients.
             </p>
 
-            <div className="footer-social">
+            {/* <div className="footer-social">
               <a href="#"><Facebook size={16} /></a>
               <a href="#"><Twitter size={16} /></a>
               <a href="#"><Instagram size={16} /></a>
               <a href="#"><Linkedin size={16} /></a>
-            </div>
+            </div> */}
           </div>
 
           <div>
             <h4>Quick Links</h4>
-            <ul>
-              <li><button onClick={() => onNavigate("home")}>Home</button></li>
-              <li><button onClick={() => onNavigate("about")}>About Us</button></li>
-              <li><button onClick={() => onNavigate("treatments")}>Treatments</button></li>
-              <li><button onClick={() => onNavigate("process")}>Patient Process</button></li>
-              <li><button onClick={() => onNavigate("partners")}>Hospitals & Doctors</button></li>
-              <li><button onClick={() => onNavigate("contact")}>Contact Us</button></li>
+            <ul className="quick-links">
+              <li><a className="footer-links" href="/">Home</a></li>
+              <li><a className="footer-links" href="/about">About Us</a></li>
+              <li><a className="footer-links" href="/services">Services</a></li>
+              <li><a className="footer-links" href="/process">Patient Process</a></li>
+              <li><a className="footer-links" href="/partners">Hospitals </a></li>
+              <li><a className="footer-links" href="/partners">Doctors</a></li>
+              <li><a className="footer-links" href="/contact">Contact Us</a></li>
             </ul>
+
           </div>
 
           <div>
             <h4>Our Treatments</h4>
-            <ul>
-              {treatments.map((item) => (
-                <li key={item}>
-                  <button onClick={() => onNavigate("treatments")}>{item}</button>
-                </li>
-              ))}
+            <ul className="quick-links">
+              <li><a className="footer-links" href="/treatments">Heart Surgery</a></li>
+              <li><a className="footer-links" href="/treatments">Bone & Joint</a></li>
+              <li><a className="footer-links" href="/treatments">Neurology & Neurosurgery</a></li>
+              <li><a className="footer-links" href="/treatments">Cancer Treatment</a></li>
+              <li><a className="footer-links" href="/treatments">IVF & Fertility</a></li>
+              <li><a className="footer-links" href="/treatments">Dental Care</a></li>
+              <li><a className="footer-links" href="/treatments">Cosmetic Surgery</a></li>
+              <li><a className="footer-links" href="/treatments">Eye Care</a></li>
             </ul>
           </div>
 
@@ -82,7 +79,7 @@ export default function Footer({ onNavigate }) {
                 <Phone size={18} />
                 <div>
                   <strong>24/7 Emergency</strong>
-                  <a href="tel:+919876543210">+91 987 654 3210</a>
+                  <a href="tel:+91 86558 35979">+91 987 654 3210</a>
                 </div>
               </div>
 
@@ -90,8 +87,8 @@ export default function Footer({ onNavigate }) {
                 <Mail size={18} />
                 <div>
                   <strong>Email Us</strong>
-                  <a href="mailto:info@humancaremvt.com">
-                    info@humancaremvt.com
+                  <a href="mailto:medicaltourism@humancareworldwide.com">
+                    medicaltourism@humancareworldwide.com
                   </a>
                 </div>
               </div>
@@ -101,14 +98,15 @@ export default function Footer({ onNavigate }) {
                 <div>
                   <strong>Office Address</strong>
                   <p>
-                    123 Medical Tower,<br />
-                    Connaught Place,<br />
-                    New Delhi - 110001
+                    544, Dheeraj Haritage, S. V. Road,<br />
+                    Junction, Milan Subway,<br />
+                    Santacruz (West), Mumbai,<br />
+                    Maharashtra 400054
                   </p>
                 </div>
               </div>
 
-              
+
             </div>
           </div>
         </div>

@@ -95,7 +95,8 @@ export default function AboutPage() {
         </div>
 
         <div className="who-image">
-          <img src={aboutImg} alt="Medical Team" />
+          <img src={aboutImg} alt="Medical Team" />   
+          {/* add image */}
         </div>
       </section>
 

@@ -50,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* EMERGENCY BUTTON */}
-          <a href="tel:+919820073734" className="emergency-btn">
+          <a href="tel:+918655835979" className="emergency-btn">
             <Phone size={16} />
             Emergency
           </a>
@@ -74,7 +74,7 @@ const Header = () => {
               </NavLink>
             ))}
 
-            <a href="tel:+919820073734" className="emergency-btn mobile">
+            <a href="tel:+918655835979" className="emergency-btn mobile">
               <Phone size={16} />
               Emergency Call
             </a>
