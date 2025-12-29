@@ -228,7 +228,7 @@ export default function HomePage() {
             </Link>
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/+918655835979"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn green-btn"
@@ -502,7 +502,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <Link to="/how-it-works" className="cta-btn">
+          <Link to="/process" className="cta-btn">
             Know More →
           </Link>
         </div>
@@ -529,17 +529,8 @@ export default function HomePage() {
         </p>
 
         <div className="blue-cta-buttons">
-          <Link to="/contact" className="blue-btn-outline">
-            <Phone size={18} /> Get Free Consultation
-          </Link>
-
-          <a
-            href="https://wa.me/919876543210"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="blue-btn-whatsapp"
-          >
-            <MessageCircle size={18} /> WhatsApp Now
+          <a href="tel:+918655835979" className="blue-btn-outline">
+            <Phone size={18} /> Call Now
           </a>
         </div>
       </section>

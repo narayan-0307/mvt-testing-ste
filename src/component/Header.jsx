@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import "./Header.css";
-import logo from "../assets/react.svg";
+import logo from "../assets/humancare.webp";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* EMERGENCY BUTTON */}
-          <a href="tel:+919820073734" className="emergency-btn">
+          <a href="tel:+918655835979" className="emergency-btn">
             <Phone size={16} />
             Emergency
           </a>
@@ -74,7 +74,7 @@ const Header = () => {
               </NavLink>
             ))}
 
-            <a href="tel:+919820073734" className="emergency-btn mobile">
+            <a href="tel:+918655835979" className="emergency-btn mobile">
               <Phone size={16} />
               Emergency Call
             </a>
