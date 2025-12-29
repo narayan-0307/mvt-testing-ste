@@ -12,22 +12,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-<<<<<<< HEAD
-
-=======
 /* CONTAINER */
-/* .navbar-container {
+.navbar-container {
   max-width: 1800px;
   margin: auto;
   padding: 0 48px;
-} */
->>>>>>> 1a6f214241ed23665112abaf27a3012a3b8079cf
+}
 
 .navbar-container {
-    width: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 48px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 48px;
 }
 
 /* INNER */
