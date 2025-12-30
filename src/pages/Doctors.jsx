@@ -1,21 +1,20 @@
 import React from "react";
 import { Award } from "lucide-react";
 import "./Doctors.css";
+import Narendra from "../assets/dr-naresh-trehan.webp";
 
 const doctors = [
   {
-    name: "Dr. Devi Prasad Shetty",
-    specialty: "Cardiac Surgery",
-    hospital: "Narayana Health",
+    name: "Dr Narendra trehan",
+    specialty: "Cardiovascular & Cardiothoracic Surgeon",
     experience: "40+ years",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d",
+    image: Narendra,
   },
   {
-    name: "Dr. Randeep Guleria",
-    specialty: "Pulmonology",
-    hospital: "AIIMS Delhi",
-    experience: "35+ years",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
+    name: "Dr Balkrisnan",
+    specialty: "Cardiothoracic / Heart Surgery",
+    experience: "40+ years",
+    image: Mohad,
   },
   {
     name: "Dr. Ashok Seth",
