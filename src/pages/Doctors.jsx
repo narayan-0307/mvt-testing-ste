@@ -1,21 +1,48 @@
 import React from "react";
 import { Award } from "lucide-react";
 import "./Doctors.css";
-import Narendra from "../assets/dr-naresh-trehan.webp";
-import Balkrisnan from "../assets/dr-naresh-trehan.webp";
-import Mohd from "../assets/dr-naresh-trehan.webp";
-import Adwani from "../assets/dr-naresh-trehan.webp";
-import Amit from "../assets/dr-naresh-trehan.webp";
-import Kaushal from "../assets/dr-naresh-trehan.webp";
-import Hamdule from "../assets/dr-naresh-trehan.webp";
-import Sudhansu from "../assets/dr-naresh-trehan.webp";
-import Abhay from "../assets/dr-naresh-trehan.webp";
-import Dinshaw from "../assets/dr-naresh-trehan.webp";
-import Shailesh from "../assets/dr-naresh-trehan.webp";
-import Kamran from "../assets/dr-naresh-trehan.webp";
-import Sanjeev from "../assets/dr-naresh-trehan.webp";
-import Fatuque from "../assets/dr-naresh-trehan.webp";
-import zarir from "../assets/dr-naresh-trehan.webp";
+import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
+import Balkrisnan from "../assets/docters/balakrishna.jpeg";
+import Mohd from "../assets/docters/mohamed-rela.jpeg";
+import Adwani from "../assets/docters/suresh-advani.jpeg";
+import Amit from "../assets/docters/amit-maydeo.jpeg";
+import Kaushal from "../assets/docters/kaushal-pandey.jpeg";
+import Hamdule from "../assets/docters/dr-naresh-trehan.jpeg";
+import Sudhansu from "../assets/docters/dr-naresh-trehan.jpeg";
+import Abhay from "../assets/docters/dr-naresh-trehan.jpeg";
+import Dinshaw from "../assets/docters/dr-naresh-trehan.jpeg";
+import Shailesh from "../assets/docters/dr-naresh-trehan.jpeg";
+import Kamran from "../assets/docters/dr-naresh-trehan.jpeg";
+import Sanjeev from "../assets/docters/dr-naresh-trehan.jpeg";
+import Fatuque from "../assets/docters/dr-naresh-trehan.jpeg";
+import zarir from "../assets/docters/dr-naresh-trehan.jpeg";
+// -----------------DELHI--------------------------------------------------------------
+import Rakesh from "../assets/docters/dr-naresh-trehan.jpeg";
+import Soin from "../assets/docters/dr-naresh-trehan.jpeg";
+import Ashok from "../assets/docters/dr-naresh-trehan.jpeg";
+import Sandeep from "../assets/docters/dr-naresh-trehan.jpeg";
+import Rajeev from "../assets/docters/dr-naresh-trehan.jpeg";
+import Rohit from "../assets/docters/dr-naresh-trehan.jpeg";
+// --------------------------HYDERABAD--------------------------------------------------
+import Nageshwar from "../assets/docters/dr-naresh-trehan.jpeg";
+import Gopi from "../assets/docters/dr-naresh-trehan.jpeg";
+import Sudheer from "../assets/docters/dr-naresh-trehan.jpeg";
+import Gurava from "../assets/docters/dr-naresh-trehan.jpeg";
+import SKGupta from "../assets/docters/dr-naresh-trehan.jpeg";
+import AVSSuresh from "../assets/docters/dr-naresh-trehan.jpeg";
+// ------------------------BANGALORE----------------------------------------------------
+import DeviPrasad from "../assets/docters/dr-naresh-trehan.jpeg";
+import SandeepN from "../assets/docters/dr-naresh-trehan.jpeg";
+import Gopinath from "../assets/docters/dr-naresh-trehan.jpeg";
+import Kamini from "../assets/docters/dr-naresh-trehan.jpeg";
+import Shobha from "../assets/docters/dr-naresh-trehan.jpeg";
+import Kamal from "../assets/docters/dr-naresh-trehan.jpeg";
+import Venkataram from "../assets/docters/dr-naresh-trehan.jpeg";
+import Anil from "../assets/docters/dr-naresh-trehan.jpeg";
+// ------------------------CHENNAI-------------------------------------------------------
+import Thiagarajan from "../assets/docters/dr-naresh-trehan.jpeg";
+import Balakrishnan from "../assets/docters/dr-naresh-trehan.jpeg";
+import Vijayan from "../assets/docters/dr-naresh-trehan.jpeg";
 
 const doctors = [
   {
@@ -38,7 +65,7 @@ const doctors = [
     image: Mohd,
   },
   {
-    name: "Dr. Adwani",
+    name: "Dr. Suresh Adwani",
     specialty: "Oncologist",
     experience: "45+ years",
     image: Adwani,
@@ -100,7 +127,7 @@ const doctors = [
   {
     name: "Dr. Fatuque Udwadia",
     specialty: "Critical Care Medicine",
-    experience: "30+ years",
+    experience: "70+ years",
     image: Fatuque,
   },
   {
@@ -109,23 +136,157 @@ const doctors = [
     experience: "30+ years",
     image: zarir,
   },
+
+  // -----------------DELHI----------------------------------
   {
-    name: "Dr Sanjeev Amin",
-    specialty: "Rheumatologist",
-    experience: "30+ years",
-    image: Sanjeev,
+    name: "Dr. Rakesh Gupta",
+    specialty:
+      "Over 25 years of experience in general medicine and internal medicine.",
+    experience: "25+ years",
+    image: Rakesh,
   },
   {
-    name: "Dr Sanjeev Amin",
-    specialty: "Rheumatologist",
-    experience: "30+ years",
-    image: Sanjeev,
+    name: "Dr. A.S. Soin",
+    specialty:
+      "Internationally recognized pioneer in liver transplantation and hepatobiliary surgery",
+    experience: "35+ years",
+    image: Soin,
   },
   {
-    name: "Dr Sanjeev Amin",
+    name: "Dr. Ashok Rajgopal",
+    specialty:
+      "One of India’s most experienced orthopaedic surgeons, especially for knee surgeries (arthroplasty, arthroscopy).",
+    experience: "45+ years",
+    image: Ashok,
+  },
+  {
+    name: "Dr. Sandeep Vaishya",
+    specialty:
+      "Expert in minimally invasive neurosurgery, skull base tumors, spinal surgery, image-guided procedures, brachial plexus surgery, and more.",
+    experience: "30+ years",
+    image: Sandeep,
+  },
+  {
+    name: "Dr. Rajeev Seth",
     specialty: "Rheumatologist",
     experience: "30+ years",
-    image: Sanjeev,
+    image: Rajeev,
+  },
+  {
+    name: "Dr. Rohit Bansil",
+    specialty: "Neurosurgeon & Spine Specialist",
+    experience: "15+ years",
+    image: Rohit,
+  },
+
+  // --------------------------HYDERABAD-------------------------------------
+  {
+    name: "Dr. D. Nageshwar Reddy",
+    specialty: "Gastroenterology Pioneer",
+    experience: "50+ years",
+    image: Nageshwar,
+  },
+  {
+    name: "Dr. Gopi Chand Mannam",
+    specialty: "Cardiac Surgeon & Leader",
+    experience: "40+ years",
+    image: Gopi,
+  },
+  {
+    name: "Dr. Sudheer Koganti",
+    specialty: "Cardiology Specialist",
+    experience: "15+ years",
+    image: Sudheer,
+  },
+  {
+    name: "Dr. A. V. Gurava Reddy",
+    specialty: "Orthopedic Surgeon & Joint Replacement Expert",
+    experience: "30+ years",
+    image: Gurava,
+  },
+  {
+    name: "Dr. S.K. Gupta",
+    specialty: "Interventional Cardiologist",
+    experience: "20+ years",
+    image: SKGupta,
+  },
+  {
+    name: "Dr. AVS Suresh",
+    specialty: "Medical Oncologist & Hematologist",
+    experience: "20+ years",
+    image: AVSSuresh,
+  },
+
+  // ------------------------BANGALORE-------------------------------------
+  {
+    name: "Dr. Devi Prasad Shetty",
+    specialty: "Cardiac Surgeon",
+    experience: "35+ years",
+    image: DeviPrasad,
+  },
+  {
+    name: "Dr. Sandeep Nayak",
+    specialty: "Surgical Oncologist",
+    experience: "25+ years",
+    image: SandeepN,
+  },
+  {
+    name: "Dr. Kodaganur S. Gopinath",
+    specialty: "Surgical Oncologist",
+    experience: "45+ years",
+    image: Gopinath,
+  },
+  {
+    name: "Dr. Kamini A. Rao",
+    specialty: "Reproductive Medicine & IVF Specialist",
+    experience: "40+ years",
+    image: Kamini,
+  },
+  {
+    name: "Dr. Shobha Nandavar",
+    specialty: "neurology specialists",
+    experience: "20+ years",
+    image: Shobha,
+  },
+  {
+    name: "Dr. Kamal Kiran Mukkavilli",
+    specialty: "nephrologist and kidney transplant specialist.",
+    experience: "20+ years",
+    image: Kamal,
+  },
+  {
+    name: "Dr. Venkataram Mysore",
+    specialty:
+      "Dermatologist with global awards and leadership roles in international societies.",
+    experience: "35+ years",
+    image: Venkataram,
+  },
+  {
+    name: "Dr. Anil Kumar T",
+    specialty:
+      "Expert in minimally invasive and robotic uro-oncologic surgeries.",
+    experience: "10+ years",
+    image: Anil,
+  },
+
+  // ------------------------CHENNAI---------------------------------------------
+  {
+    name: "Dr. Thiagarajan Srinivasan",
+    specialty: "Liver Transplant & HPB Surgery",
+    experience: "20+ years",
+    image: Thiagarajan,
+  },
+  {
+    name: "Dr. K. R. Balakrishnan",
+    specialty: "Cardiothoracic & Heart Transplant Surgery",
+    experience: "40+ years",
+    image: Balakrishnan,
+  },
+  {
+    name: "Dr. J. Vijayan",
+    specialty: "Gastroenterology & Hepatology",
+    experience: "40+ years",
+    image: Vijayan,
   },
 ];
 
