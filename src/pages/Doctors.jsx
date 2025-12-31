@@ -7,42 +7,41 @@ import Mohd from "../assets/docters/mohamed-rela.jpeg";
 import Adwani from "../assets/docters/suresh-advani.jpeg";
 import Amit from "../assets/docters/amit-maydeo.jpeg";
 import Kaushal from "../assets/docters/kaushal-pandey.jpeg";
-import Hamdule from "../assets/docters/dr-naresh-trehan.jpeg";
-import Sudhansu from "../assets/docters/dr-naresh-trehan.jpeg";
-import Abhay from "../assets/docters/dr-naresh-trehan.jpeg";
-import Dinshaw from "../assets/docters/dr-naresh-trehan.jpeg";
-import Shailesh from "../assets/docters/dr-naresh-trehan.jpeg";
-import Kamran from "../assets/docters/dr-naresh-trehan.jpeg";
-import Sanjeev from "../assets/docters/dr-naresh-trehan.jpeg";
-import Fatuque from "../assets/docters/dr-naresh-trehan.jpeg";
-import zarir from "../assets/docters/dr-naresh-trehan.jpeg";
+import Hamdule from "../assets/docters/hamdulay.jpg";
+// import Sudhansu from "../assets/docters/dr-naresh-trehan.jpeg";
+import Abhay from "../assets/docters/abhay-bhave.jpeg";
+import Dinshaw from "../assets/docters/dinshaw-pardiwala.jpg";
+import Shailesh from "../assets/docters/shailesh_raina.jpg";
+import Kamran from "../assets/docters/kamran-khan.jpg";
+import Sanjeev from "../assets/docters/sanjiv-amin.jpg";
+import Fatuque from "../assets/docters/fatuque-udwadia.jpeg";
+import zarir from "../assets/docters/zarir-udwadia.jpeg";
 // -----------------DELHI--------------------------------------------------------------
-import Rakesh from "../assets/docters/dr-naresh-trehan.jpeg";
-import Soin from "../assets/docters/dr-naresh-trehan.jpeg";
-import Ashok from "../assets/docters/dr-naresh-trehan.jpeg";
-import Sandeep from "../assets/docters/dr-naresh-trehan.jpeg";
-import Rajeev from "../assets/docters/dr-naresh-trehan.jpeg";
-import Rohit from "../assets/docters/dr-naresh-trehan.jpeg";
+import Rakesh from "../assets/docters/rakesh-gupta.jpeg";
+import Soin from "../assets/docters/soin.jpeg";
+import Ashok from "../assets/docters/ashok-rajgopala.jpg";
+import Sandeep from "../assets/docters/sandeep-vaishya.jpeg";
+// import Rajeev from "../assets/docters/dr-naresh-trehan.jpeg";
+import Rohit from "../assets/docters/rohit-bansil.jpg";
 // --------------------------HYDERABAD--------------------------------------------------
-import Nageshwar from "../assets/docters/dr-naresh-trehan.jpeg";
-import Gopi from "../assets/docters/dr-naresh-trehan.jpeg";
-import Sudheer from "../assets/docters/dr-naresh-trehan.jpeg";
-import Gurava from "../assets/docters/dr-naresh-trehan.jpeg";
-import SKGupta from "../assets/docters/dr-naresh-trehan.jpeg";
-import AVSSuresh from "../assets/docters/dr-naresh-trehan.jpeg";
+import Nageshwar from "../assets/docters/nageshwar-reddy.jpeg";
+import Gopi from "../assets/docters/gopi-chand.jpeg";
+import Sudheer from "../assets/docters/sudheer-koganti.jpeg";
+import Gurava from "../assets/docters/gurav-reddy.jpg";
+import SKGupta from "../assets/docters/s-k-gupta.jpeg";
+import AVSSuresh from "../assets/docters/AVS-Suresh.jpeg";
 // ------------------------BANGALORE----------------------------------------------------
-import DeviPrasad from "../assets/docters/dr-naresh-trehan.jpeg";
-import SandeepN from "../assets/docters/dr-naresh-trehan.jpeg";
-import Gopinath from "../assets/docters/dr-naresh-trehan.jpeg";
-import Kamini from "../assets/docters/dr-naresh-trehan.jpeg";
-import Shobha from "../assets/docters/dr-naresh-trehan.jpeg";
-import Kamal from "../assets/docters/dr-naresh-trehan.jpeg";
-import Venkataram from "../assets/docters/dr-naresh-trehan.jpeg";
-import Anil from "../assets/docters/dr-naresh-trehan.jpeg";
+// import DeviPrasad from "../assets/docters/dr-naresh-trehan.jpeg";
+import SandeepN from "../assets/docters/sandeep-nayak.jpeg";
+import Gopinath from "../assets/docters/kodaganur-gopinath.jpeg";
+import Kamini from "../assets/docters/kamini-rao.jpg";
+import Shobha from "../assets/docters/shobha-nandavar.jpeg";
+import Kamal from "../assets/docters/kamal-kiran.jpeg";
+import Venkataram from "../assets/docters/venkataram-mysore.jpg";
+import Anil from "../assets/docters/Anil-kumar.jpg";
 // ------------------------CHENNAI-------------------------------------------------------
-import Thiagarajan from "../assets/docters/dr-naresh-trehan.jpeg";
-import Balakrishnan from "../assets/docters/dr-naresh-trehan.jpeg";
-import Vijayan from "../assets/docters/dr-naresh-trehan.jpeg";
+import Thiagarajan from "../assets/docters/thiagarajan-srinivasan.jpeg";
+import Vijayan from "../assets/docters/vijayan.jpeg";
 
 const doctors = [
   {
@@ -88,12 +87,12 @@ const doctors = [
     experience: "30+ years",
     image: Hamdule,
   },
-  {
-    name: "Dr. Sudhansu Bhattacharya",
-    specialty: "Cardio-Thoracic & Vascular Surgeon",
-    experience: "40+ years",
-    image: Sudhansu,
-  },
+  // {
+  //   name: "Dr. Sudhansu Bhattacharya",
+  //   specialty: "Cardio-Thoracic & Vascular Surgeon",
+  //   experience: "40+ years",
+  //   image: Sudhansu,
+  // },
   {
     name: "Dr. Abhay Bhave",
     specialty: "Haematologist",
@@ -166,12 +165,12 @@ const doctors = [
     experience: "30+ years",
     image: Sandeep,
   },
-  {
-    name: "Dr. Rajeev Seth",
-    specialty: "Rheumatologist",
-    experience: "30+ years",
-    image: Rajeev,
-  },
+  // {
+  //   name: "Dr. Rajeev Seth",
+  //   specialty: "Rheumatologist",
+  //   experience: "30+ years",
+  //   image: Rajeev,
+  // },
   {
     name: "Dr. Rohit Bansil",
     specialty: "Neurosurgeon & Spine Specialist",
@@ -218,12 +217,12 @@ const doctors = [
   },
 
   // ------------------------BANGALORE-------------------------------------
-  {
-    name: "Dr. Devi Prasad Shetty",
-    specialty: "Cardiac Surgeon",
-    experience: "35+ years",
-    image: DeviPrasad,
-  },
+  // {
+  //   name: "Dr. Devi Prasad Shetty",
+  //   specialty: "Cardiac Surgeon",
+  //   experience: "35+ years",
+  //   image: DeviPrasad,
+  // },
   {
     name: "Dr. Sandeep Nayak",
     specialty: "Surgical Oncologist",
@@ -275,12 +274,6 @@ const doctors = [
     specialty: "Liver Transplant & HPB Surgery",
     experience: "20+ years",
     image: Thiagarajan,
-  },
-  {
-    name: "Dr. K. R. Balakrishnan",
-    specialty: "Cardiothoracic & Heart Transplant Surgery",
-    experience: "40+ years",
-    image: Balakrishnan,
   },
   {
     name: "Dr. J. Vijayan",
