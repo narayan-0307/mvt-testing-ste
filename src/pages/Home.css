@@ -21,8 +21,6 @@ a {
 /* 🌐 GLOBAL RESET — END
 ============================================================ */
 
-
-
 /* ============================================================
    🔘 GLOBAL BUTTON STYLES — START
 ============================================================ */
@@ -85,8 +83,6 @@ a {
 }
 /* 🔘 GLOBAL BUTTONS — END
 ============================================================ */
-
-
 
 /* ============================================================
    🏠 HERO SECTION — START
@@ -207,10 +203,112 @@ a {
   font-size: 14px;
   color: #dcdcdc;
 }
+/* Responsive rules for hero and trust cards */
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 80px 30px;
+    gap: 28px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-title-new {
+    font-size: 44px;
+  }
+
+  .hero-right {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .trust-card-new {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .trust-icon-new {
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 50px 18px;
+  }
+
+  .hero-title-new {
+    font-size: 32px;
+  }
+
+  .hero-desc-new {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-right {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .trust-card-new {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .trust-card-new h3 {
+    font-size: 16px;
+  }
+
+  .trust-card-new p {
+    font-size: 13px;
+    color: #e6e6e6;
+  }
+
+  .trust-icon-new {
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 36px 12px;
+  }
+
+  .hero-title-new {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  .hero-buttons .cta-btn {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .trust-card-new {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .trust-card-new h3 {
+    font-size: 15px;
+  }
+
+  .trust-card-new p {
+    font-size: 12px;
+  }
+}
 /* 🏠 HERO SECTION — END
 ============================================================ */
-
-
 
 /* ============================================================
    🏥 ABOUT SECTION — START
@@ -291,7 +389,7 @@ a {
 }
 
 .about-btn:hover {
-  background:var(--blue);
+  background: var(--blue);
   color: white;
 }
 
@@ -378,8 +476,6 @@ a {
   gap: 28px;
 }
 
-
-
 /* CARD */
 .hospital-card {
   background: #ffffff;
@@ -387,9 +483,7 @@ a {
   padding: 32px 24px 36px;
   border: 1px solid #e6ecf5;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-} 
-
-
+}
 
 /* IMAGE */
 .hospital-image {
@@ -463,8 +557,6 @@ a {
     font-size: 32px;
   }
 }
-
-
 
 /* hospital section end */
 
@@ -727,12 +819,6 @@ a {
 /* ⭐ WHY CHOOSE US — END
 ============================================================ */
 
-
-
-
-
-
-
 /* ============================================================
    📣 FINAL CTA — START
 ============================================================ */
@@ -750,8 +836,6 @@ a {
 }
 /* 📣 FINAL CTA — END
 ============================================================ */
-
-
 
 /* ============================================================
    🔄 PROCESS CTA SECTION — START
@@ -780,8 +864,6 @@ a {
 }
 /* 🔄 PROCESS CTA — END
 ============================================================ */
-
-
 
 /* ============================================================
    🌍 ADVANTAGES SECTION — START
@@ -942,7 +1024,6 @@ a {
 .blue-btn-whatsapp:hover {
   background-color: #1eb85a;
 }
-
 
 /* end cta */
 
