@@ -148,14 +148,14 @@ const doctors = [
   {
     name: "Dr. Rakesh Gupta",
     specialty:
-      "Over 25 years of experience in general medicine and internal medicine.",
+      "General Medicine and Internal Medicine.",
     experience: "25+ years",
     image: Rakesh,
   },
   {
     name: "Dr. A.S. Soin",
     specialty:
-      "Internationally recognized pioneer in liver transplantation and hepatobiliary surgery",
+      "Liver Transplantation and Hepatobiliary Surgery",
     experience: "35+ years",
     image: Soin,
   },
@@ -169,7 +169,7 @@ const doctors = [
   {
     name: "Dr. Sandeep Vaishya",
     specialty:
-      "Expert in minimally invasive neurosurgery, skull base tumors, spinal surgery, image-guided procedures, brachial plexus surgery, and more.",
+      "Expert In Neurosurgery, skull base tumors, spinal surgery",
     experience: "30+ years",
     image: Sandeep,
   },
@@ -251,13 +251,13 @@ const doctors = [
   },
   {
     name: "Dr. Shobha Nandavar",
-    specialty: "neurology specialists",
+    specialty: "Neurology Specialists",
     experience: "20+ years",
     image: Shobha,
   },
   {
     name: "Dr. Kamal Kiran Mukkavilli",
-    specialty: "nephrologist and kidney transplant specialist.",
+    specialty: "Nephrologist and Kidney Transplant Specialist.",
     experience: "20+ years",
     image: Kamal,
   },
