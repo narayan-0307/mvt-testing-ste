@@ -3,9 +3,12 @@
   --blue: #0a1754;
   --red: #d90000;
   --light-red: #ffebeb;
-
   /* Font */
   --font-family: Arial, sans-serif;
+
+  /* Background / text defaults */
+  --page-bg: #ffffff;
+  --page-text: #222222;
 }
 
 /* ===========================
@@ -18,7 +21,8 @@
 }
 
 body {
-  font-family: var(--font-primary);
-  background: var(--text-dark);
+  font-family: var(--font-family);
+  background: var(--page-bg);
+  color: var(--page-text);
   line-height: 1.6;
 }

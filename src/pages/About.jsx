@@ -7,29 +7,87 @@ import {
   Target,
   CheckCircle2,
   Phone,
+  Stethoscope,
+  Building2,
+  FileText,
+  Plane,
+  Car,
+  UserCheck,
+  Languages,
+  HeartPulse,
+  Headset,
 } from "lucide-react";
 import aboutImg from "../assets/about.jpg";
 import "./About.css";
 
+import { useEffect, useState } from "react";
+import about1 from "../assets/about-1.jpeg";
+import about2 from "../assets/about-2.jpeg";
+import about3 from "../assets/about-3.jpeg";
+import about4 from "../assets/about-4.jpeg";
+
+const images = [about1, about2, about3, about4];
+
 export default function AboutPage() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000); // change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
-      {/* HERO */}
-      <section className="about-hero">
-        <span className="hero-badge">About HumanCare MVT</span>
-        <h2>Your Trusted Global Medical Travel Partner</h2>
-        <p>
-          Humnacare Medical Value Travel connects international patients with
-          leading hospitals and specialists in India and worldwide. We simplify
-          cross-border healthcare through ethical guidance, transparent pricing,
-          and complete end-to-end support.
-        </p>
-        <p>
-          From medical opinions and treatment coordination to travel assistance
-          and post-care follow-up, we ensure a safe, seamless, and
-          patient-focused healthcare journey.
-        </p>
+      <section
+        className="about-hero-section"
+        style={{
+          backgroundImage: `
+          linear-gradient(
+            to right,
+            rgba(10, 23, 84, 1) 0%,
+            rgba(10, 23, 84, 0.88) 35%,
+            rgba(10, 23, 84, 0.5) 60%,
+            transparent 100%
+          ),
+          url(${images[currentImage]})
+        `,
+        }}
+      >
+        <div>
+          <span className="about-hero-badge">About HumanCare MVT</span>
+          <h2>Your Trusted Global Medical Travel Partner</h2>
+          <p>
+            Humancare Medical Value Travel connects international patients with
+            leading hospitals and specialists in India and worldwide.
+          </p>
+          <p>
+            From medical opinions and treatment coordination to travel
+            assistance and post-care follow-up, we ensure a safe, seamless, and
+            patient-focused healthcare journey.
+          </p>
+        </div>
       </section>
+
+      {/* HERO */}
+      {/* <section className="about-hero-section">
+        <div>
+          <span className="about-hero-badge">About HumanCare MVT</span>
+          <h2>Your Trusted Global Medical Travel Partner</h2>
+          <p>
+            Humancare Medical Value Travel connects international patients with
+            leading hospitals and specialists in India and worldwide. We
+            simplify cross-border healthcare through ethical guidance,
+            transparent pricing, and complete end-to-end support.
+          </p>
+          <p>
+            From medical opinions and treatment coordination to travel
+            assistance and post-care follow-up, we ensure a safe, seamless, and
+            patient-focused healthcare journey.
+          </p>
+        </div>
+      </section> */}
 
       {/* STATS */}
       <section className="stats-section">
@@ -73,7 +131,7 @@ export default function AboutPage() {
           <h2>Compassionate Care, Global Reach</h2>
 
           <p>
-            At Humnacare Medical Value Travel, we believe quality healthcare
+            At Humancare Medical Value Travel, we believe quality healthcare
             should be accessible—no matter where you live. We connect patients
             worldwide with trusted hospitals and experienced specialists, making
             cross-border medical care simple, safe, and affordable.
@@ -95,7 +153,7 @@ export default function AboutPage() {
         </div>
 
         <div className="who-image">
-          <img src={aboutImg} alt="Medical Team" />   
+          <img src={aboutImg} alt="Medical Team" />
           {/* add image */}
         </div>
       </section>
@@ -177,19 +235,46 @@ export default function AboutPage() {
 
         <div className="support-grid">
           {[
-            "Free initial consultation & medical opinion",
-            "Hospital & doctor selection based on your needs",
-            "Visa assistance & documentation support",
-            "Flight & hotel booking arrangements",
-            "Airport pickup & local transportation",
-            "Dedicated patient coordinator throughout",
-            "Translation & interpretation services",
-            "Post-treatment follow-up care",
-            "24/7 emergency support",
+            {
+              icon: <Stethoscope />,
+              text: "Free initial consultation & medical opinion",
+            },
+            {
+              icon: <Building2 />,
+              text: "Hospital & doctor selection based on your needs",
+            },
+            {
+              icon: <FileText />,
+              text: "Visa assistance & documentation support",
+            },
+            {
+              icon: <Plane />,
+              text: "Flight & hotel booking arrangements",
+            },
+            {
+              icon: <Car />,
+              text: "Airport pickup & local transportation",
+            },
+            {
+              icon: <UserCheck />,
+              text: "Dedicated patient coordinator throughout",
+            },
+            {
+              icon: <Languages />,
+              text: "Translation & interpretation services",
+            },
+            {
+              icon: <HeartPulse />,
+              text: "Post-treatment follow-up care",
+            },
+            {
+              icon: <Headset />,
+              text: "24/7 emergency support",
+            },
           ].map((item, index) => (
             <div key={index} className="support-item">
-              <CheckCircle2 />
-              <span>{item}</span>
+              <div className="support-icon">{item.icon}</div>
+              <p>{item.text}</p>
             </div>
           ))}
         </div>

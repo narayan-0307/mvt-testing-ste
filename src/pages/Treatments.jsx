@@ -17,21 +17,31 @@ import "./Treatments.css";
 const treatments = [
   {
     icon: HeartPulse,
-    name: "Heart Surgery",
+    name: "Cardiology",
     description:
       "Bypass surgery, valve replacement, angioplasty, and advanced cardiac procedures by renowned cardiologists.",
     price: "₹2,50,000",
     savings: "Save up to 80%",
-    procedures: ["Coronary Bypass", "Valve Replacement", "Angioplasty", "Heart Transplant"],
+    procedures: [
+      "Coronary Bypass",
+      "Valve Replacement",
+      "Angioplasty",
+      "Heart Transplant",
+    ],
   },
   {
     icon: Bone,
-    name: "Bone & Joint",
+    name: "Orthopedics",
     description:
       "Knee replacement, hip replacement, spine surgery, and orthopedic treatments with latest technology.",
     price: "₹1,50,000",
     savings: "Save up to 75%",
-    procedures: ["Knee Replacement", "Hip Replacement", "Spine Surgery", "Sports Medicine"],
+    procedures: [
+      "Knee Replacement",
+      "Hip Replacement",
+      "Spine Surgery",
+      "Sports Medicine",
+    ],
   },
   {
     icon: Brain,
@@ -40,20 +50,30 @@ const treatments = [
       "Brain tumor surgery, spine disorders, epilepsy treatment, and advanced neurological care.",
     price: "₹3,00,000",
     savings: "Save up to 70%",
-    procedures: ["Brain Tumor Surgery", "Spine Surgery", "Epilepsy Treatment", "Deep Brain Stimulation"],
+    procedures: [
+      "Brain Tumor Surgery",
+      "Spine Surgery",
+      "Epilepsy Treatment",
+      "Deep Brain Stimulation",
+    ],
   },
   {
     icon: Activity,
-    name: "Cancer Treatment",
+    name: "Oncology",
     description:
       "Comprehensive oncology care including surgery, chemotherapy, radiation therapy, and immunotherapy.",
     price: "₹4,00,000",
     savings: "Save up to 65%",
-    procedures: ["Cancer Surgery", "Chemotherapy", "Radiation Therapy", "Immunotherapy"],
+    procedures: [
+      "Cancer Surgery",
+      "Chemotherapy",
+      "Radiation Therapy",
+      "Immunotherapy",
+    ],
   },
   {
     icon: Baby,
-    name: "IVF & Fertility",
+    name: "Gynecology",
     description:
       "Advanced reproductive medicine with high success rates at world-class fertility centers.",
     price: "₹1,20,000",
@@ -80,12 +100,17 @@ const treatments = [
   },
   {
     icon: Eye,
-    name: "Eye Care",
+    name: "Ophthalmology",
     description:
       "LASIK, cataract surgery, and advanced ophthalmology treatments with precision technology.",
     price: "₹50,000",
     savings: "Save up to 70%",
-    procedures: ["LASIK Surgery", "Cataract Surgery", "Glaucoma Treatment", "Retina Surgery"],
+    procedures: [
+      "LASIK Surgery",
+      "Cataract Surgery",
+      "Glaucoma Treatment",
+      "Retina Surgery",
+    ],
   },
 ];
 
@@ -94,12 +119,14 @@ export default function TreatmentsPage() {
     <>
       {/* HERO */}
       <section className="treatments-hero">
-        <span className="hero-badge">Medical Specialties</span>
-        <h1>World-Class Treatments at Affordable Prices</h1>
-        <p>
-          Access India's finest specialists and cutting-edge medical technology
-          at a fraction of Western costs
-        </p>
+        <div>
+          <span className="hero-badge-treatment">Medical Specialties</span>
+          <h1>World-Class Treatments at Affordable Prices</h1>
+          <p>
+            Access India's finest specialists and cutting-edge medical
+            technology at a fraction of Western costs
+          </p>
+        </div>
       </section>
 
       {/* COST COMPARISON */}
@@ -120,8 +147,8 @@ export default function TreatmentsPage() {
 
       {/* TREATMENTS */}
       <section className="treatments-section">
-        <div className="section-header">
-          <span className="hero-badge">Our Specialties</span>
+        <div className="section-header-treatments">
+          <span className="hero-badge-treatments">Our Specialties</span>
           <h2>Medical Treatments We Offer</h2>
           <p>Comprehensive healthcare solutions across all major specialties</p>
         </div>
@@ -157,7 +184,7 @@ export default function TreatmentsPage() {
 
       {/* WHY INDIA */}
       <section className="why-india">
-        <div className="section-header light">
+        <div className="section-header-why light">
           {/* <span className="badge white">Why India</span> */}
           <h2>Benefits of Medical Treatment in India</h2>
           <p>
@@ -182,20 +209,17 @@ export default function TreatmentsPage() {
       </section>
 
       {/* CTA */}
-     <section className="about-cta">
-             <h2>Ready to Begin Your Healthcare Journey?</h2>
-             <p>
-               Let our expert team guide you to the best medical treatment in India
-             </p>
-     
-             <a href="tel:+918655835979" className="cta-button">
-               <Phone />
-               Contact Us Today
-             </a>
-           </section>
+      <section className="about-cta">
+        <h2>Ready to Begin Your Healthcare Journey?</h2>
+        <p>
+          Let our expert team guide you to the best medical treatment in India
+        </p>
 
+        <a href="tel:+918655835979" className="cta-button">
+          <Phone />
+          Contact Us Today
+        </a>
+      </section>
     </>
   );
 }
-
-

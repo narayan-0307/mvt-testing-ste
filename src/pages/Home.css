@@ -319,7 +319,7 @@ a {
 }
 
 .about-grid {
-  max-width: 1250px;
+  max-width: 1320px;
   /* max-width: 1450px; */
   margin: auto;
   display: grid;
@@ -329,20 +329,48 @@ a {
 }
 
 .about-badge {
+  font-size: 25px;
+  color: #0a1754;
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
-  background: #ffe8e8;
-  color: var(--red);
-  padding: 8px 18px;
-  border-radius: 20px;
-  margin-bottom: 18px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+/* Top border */
+.about-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 57px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+/* Bottom border */
+.about-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
 }
 
 .about-title {
-  font-size: 46px;
+  font-size: 40px;
   color: var(--blue);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 14px;
+  font-family: sans-serif;
 }
 
 .about-subtext,
@@ -353,6 +381,7 @@ a {
   margin-bottom: 28px;
   max-width: 650px;
   text-align: justify;
+  font-family: sans-serif;
 }
 
 .about-points {
@@ -399,7 +428,9 @@ a {
 }
 
 .about-image-new {
-  width: 100%;
+  /* width: 100%; */
+  width: 30vw;
+  height: 57vh;
   border-radius: 26px;
   box-shadow: 0 10px 30px #00000015;
 }
@@ -428,101 +459,116 @@ a {
 /* 🏥 ABOUT SECTION — END
 ============================================================ */
 
-/* hospitals section starts */
+/* hospitals section — logo grid layout (matches provided design) */
 .hospitals-section {
-  padding: 110px 20px;
-  /* padding: 40px 20px; */
+  padding: 35px 20px;
   text-align: center;
-  background: #f9fbfd;
+  background: #ffffff;
 }
 
-/* BADGE */
 .hospitals-badge {
+  font-size: 25px;
+  color: #0a1754;
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
-  background: #fdecec;
-  color: #d60000;
-  padding: 6px 18px;
-  /* padding: 15px 35px; */
-  border-radius: 20px;
-  font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.hospitals-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 72%;
+  transform: translateX(-50%);
+  width: 111px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.hospitals-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 105px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.hospitals-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0f1f38;
   margin-bottom: 16px;
 }
 
-/* TITLE */
-.hospitals-title {
-  font-size: 46px;
-  font-weight: 700;
-  color: #0f1f38;
-  margin-bottom: 12px;
-}
-
-/* SUBTITLE */
 .hospitals-subtitle {
-  max-width: 760px;
-  margin: 0 auto 45px;
-  font-size: 18px;
-  color: #4a638a;
+  max-width: 1000px;
+  margin: 0 auto 36px;
+  font-size: 16px;
+  color: #6b7b92;
   line-height: 1.6;
 }
 
-/* GRID */
+/* Logo grid */
 .hospitals-grid {
-  max-width: 1300px;
-  /* max-width: 1450px; */
-  margin: auto;
+  max-width: 1320px;
+  margin: 18px auto 70px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 80px 40px;
+  align-items: center;
+  justify-items: center;
 }
 
-/* CARD */
+/* Each logo item — simplified, no card box */
 .hospital-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 32px 24px 36px;
-  border: 1px solid #e6ecf5;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
 }
 
-/* IMAGE */
 .hospital-image {
-  width: 100%;
-  height: 160px;
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 20px;
+  width: 180px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
 }
 
 .hospital-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 160px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-/* TEXT */
-.hospital-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0f1f38;
-  margin-bottom: 6px;
+.hospital-card:hover .hospital-image img {
+  filter: none;
+  transform: translateY(-4px) scale(1.02);
 }
 
-.hospital-specialty {
-  color: #d60000;
-  font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
-
+/* Hide textual metadata on logo grid — keep layout minimal */
+.hospital-card h3,
+.hospital-specialty,
 .hospital-location {
-  color: #4a638a;
-  font-size: 14px;
+  display: none;
 }
 
 /* CTA BUTTON */
-.hospitals-cta {
-  margin-top: 60px;
+.hospitals-cta-home {
+  margin-top: 40px;
 }
 
 .explore-btn {
@@ -542,19 +588,28 @@ a {
 }
 
 /* RESPONSIVE */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .hospitals-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hospitals-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 24px;
   }
 }
 
 @media (max-width: 600px) {
   .hospitals-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
   }
 
   .hospitals-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
@@ -565,22 +620,47 @@ a {
 ============================================================ */
 .treatments {
   background: #f6f9fc;
-  padding: 80px 20px;
+  padding: 35px 20px;
 }
 
 .treatment-container {
-  max-width: 1300px;
+  max-width: 1350px;
   margin: auto;
   text-align: center;
 }
 
 .treat-badge {
+  font-size: 25px;
+  color: #0a1754;
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
-  background: #ffe8e8;
-  color: var(--red) !important;
-  padding: 8px 20px;
-  border-radius: 20px;
   font-weight: 700;
+  padding: 5px 0;
+}
+
+.treat-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.treat-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
 }
 
 .treat-title {
@@ -591,14 +671,14 @@ a {
 
 .treat-subtext {
   color: #5c6f8a;
-  max-width: 650px;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 45px;
 }
 
 .treat-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 25px;
 }
 
@@ -635,22 +715,45 @@ a {
 /* 💉 TREATMENTS SECTION — END
 ============================================================ */
 /* ==================doctors section star====================== */
-.doctors-section {
-  padding: 110px 20px;
+.doctors-section-home {
+  padding: 35px 20px;
   text-align: center;
   background: #ffffff;
 }
 
 /* BADGE */
 .doctors-badge {
+  font-size: 25px;
+  color: #0a1754;
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
-  background: #fdecec;
-  color: #d60000;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.doctors-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 73%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.doctors-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
 }
 
 /* TITLE */
@@ -663,16 +766,16 @@ a {
 
 /* SUBTITLE */
 .doctors-subtitle {
-  max-width: 720px;
-  margin: 0 auto 70px;
+  max-width: 1000px;
+  margin: 0 auto 35px;
   font-size: 18px;
   color: #4a638a;
   line-height: 1.6;
 }
 
 /* GRID */
-.doctors-grid {
-  max-width: 1300px;
+.doctors-grid-home {
+  max-width: 1350px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -743,8 +846,8 @@ a {
 }
 
 /* FOOTER TEXT */
-.doctors-footer {
-  margin-top: 60px;
+.doctors-footer-home {
+  /* margin-top: 60px; */
   font-size: 16px;
   color: #4a638a;
 }
@@ -775,27 +878,61 @@ a {
 ============================================================ */
 .why-choose {
   background: var(--blue);
-  padding: 100px 20px;
+  padding: 35px 20px;
   color: #ffffff;
   text-align: center;
 }
 
 .choose-container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: auto;
 }
 
 .choose-badge {
-  background: #2b4a72;
-  padding: 10px 24px;
-  border-radius: 25px;
-  margin-bottom: 108px !important;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
 }
 
+.choose-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 97px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, hsl(229, 68%, 66%));
+  border-radius: 2px;
+}
+.choose-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 22%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, hsl(229, 68%, 66%));
+  border-radius: 2px;
+}
 .choose-title {
-  padding-top: 25px;
   font-size: 46px;
   font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.choose-subtext {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
 }
 
 .choose-grid {
@@ -863,26 +1000,230 @@ a {
   color: #ffff;
 }
 /* 🔄 PROCESS CTA — END
+
+
 ============================================================ */
+
+/* ============================================================
+   📸 PARALLAX SECTION — START
+============================================================ */
+.study-hero {
+  position: relative;
+  height: 400px;
+  background-image: url("../assets/study-hero-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.study-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 23, 84, 0.85) 0%,
+    rgba(10, 23, 84, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn.primary {
+  background: var(--red);
+  color: #ffffff;
+  border: 2px solid var(--red);
+}
+
+.btn.primary:hover {
+  background: #b50000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(217, 0, 0, 0.3);
+}
+
+.btn.secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .study-hero {
+    height: 350px;
+    background-attachment: scroll;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-hero {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* 📸 PARALLAX SECTION — END
+============================================================ */
+
+/* Decorative shapes */
+.shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  top: -20px;
+  left: -20px;
+  border-bottom-right-radius: 100%;
+}
+
+.shape-2 {
+  width: 16px;
+  height: 16px;
+  background: #f5c400;
+  top: 30px;
+  left: 40px;
+  border-radius: 50%;
+}
 
 /* ============================================================
    🌍 ADVANTAGES SECTION — START
 ============================================================ */
 .advantages-section {
   text-align: center;
-  padding: 70px 40px;
-  background: #f8fbff;
+  padding: 35px 40px;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .tag {
-  background: #fdecee;
-  color: var(--red);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 14px;
+  font-size: 25px;
+  color: #0a1754;
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
-  margin-bottom: 16px;
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 77%;
+  transform: translateX(-50%);
+  width: 89px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.tag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 24%;
+  transform: translateX(-50%);
+  width: 88px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
 }
 
 .title {
@@ -893,16 +1234,18 @@ a {
 }
 
 .subtitle {
+  max-width: 1000px;
+  margin: 0 auto 35px;
   font-size: 18px;
-  color: #60738c;
-  margin-bottom: 50px;
+  color: #4a638a;
+  line-height: 1.6;
 }
 
 .grid-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: auto;
 }
 
@@ -970,6 +1313,9 @@ a {
   padding: 70px 20px;
   color: #fff;
   width: 100%;
+  max-width: 1350px;
+  margin: 2rem auto;
+  border-radius: 1rem;
 }
 
 .blue-cta-title {

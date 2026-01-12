@@ -24,15 +24,32 @@ import {
   Languages,
   ShieldCheck,
   User,
+  ShieldPlus,
+  Stethoscope,
+  Utensils,
+  Droplets,
+  Users,
+  Wind,
+  FlaskConical,
+  Activity,
 } from "lucide-react";
+
 import "./Home.css";
 import heroImage from "../assets/react.svg";
 import Testimonials from "../component/Testimonials";
 import Contactsection from "../component/Contactsection";
-import Apollo from "../assets/apollo.jpeg";
-import Manipal from "../assets/manipal.jpeg";
-import Fortis from "../assets/fortis.jpeg";
-import Narayana from "../assets/narayana.jpeg";
+import Apollo from "../assets/hospitals/apollo-1.jpeg";
+import Aster from "../assets/hospitals/aster-11.png";
+import Fortis from "../assets/hospitals/fortis.jpeg";
+import Gleneagles from "../assets/hospitals/gleneagles.jpeg";
+import Hcg from "../assets/hospitals/hcg.jpeg";
+import Kims from "../assets/hospitals/kims-1.jpeg";
+import Kokilaben from "../assets/hospitals/kokilaben-1.jpeg";
+import Manipal from "../assets/hospitals/manipal.jpeg";
+import Medanta from "../assets/hospitals/medanta.jpeg";
+import Medicover from "../assets/hospitals/medicover.jpeg";
+import Nanavati from "../assets/hospitals/nanavati.jpeg";
+import Narayana from "../assets/hospitals/narayana.jpeg";
 
 import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
 import Balkrisnan from "../assets/docters/balakrishna.jpeg";
@@ -47,16 +64,64 @@ const hospitals = [
     image: Apollo,
   },
   {
-    name: "Manipal Hospitals",
+    name: "Aster Hospitals",
     specialty: "Multi-Specialty Hospital",
-    // location: "New Delhi, India",
-    image: Manipal,
+    // location: "Gurugram, India",
+    image: Aster,
   },
   {
     name: "Fortis Healthcare",
     specialty: "Multi-Specialty Hospital",
     // location: "Multiple Locations",
     image: Fortis,
+  },
+  {
+    name: "Gleneagles Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Gleneagles,
+  },
+  {
+    name: "hcg Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Hcg,
+  },
+  {
+    name: "KIMS Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Kims,
+  },
+  {
+    name: "Kokilaben Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Kokilaben,
+  },
+  {
+    name: "Medanta Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Medanta,
+  },
+  {
+    name: "Manipal Hospitals",
+    specialty: "Multi-Specialty Hospital",
+    // location: "New Delhi, India",
+    image: Manipal,
+  },
+  {
+    name: "Medicover Hospitals",
+    specialty: "Multi-Specialty Hospital",
+    // location: "New Delhi, India",
+    image: Medicover,
+  },
+  {
+    name: "Nanavati Hospitals",
+    specialty: "Multi-Specialty Hospital",
+    // location: "New Delhi, India",
+    image: Nanavati,
   },
   {
     name: "Narayana Health",
@@ -135,6 +200,7 @@ const doctors = [
     image: Nageshwar,
   },
 ];
+
 const trustHighlights = [
   {
     icon: Clock,
@@ -270,7 +336,7 @@ export default function HomePage() {
             <span className="about-badge">About Us</span>
 
             <h2 className="about-title">
-              Your Trusted Partner for <br /> Global Healthcare
+              Your Trusted Partner for Global Healthcare
             </h2>
 
             <p className="about-subtext">
@@ -372,18 +438,21 @@ export default function HomePage() {
 
           <div className="treat-grid">
             {[
-              { icon: HeartPulse, name: "Heart Surgery" },
-              { icon: Bone, name: "Bone & Joint" },
+              { icon: HeartPulse, name: "Cardiology" },
               { icon: Brain, name: "Neurology" },
-              { icon: Baby, name: "IVF & Fertility" },
-              { icon: Smile, name: "Dental Care" },
-              { icon: Sparkles, name: "Cosmetic Surgery" },
-              { icon: HeartPulse, name: "Heart Surgery" },
-              { icon: Bone, name: "Bone & Joint" },
-              { icon: Brain, name: "Neurology" },
-              { icon: Baby, name: "IVF & Fertility" },
-              { icon: Smile, name: "Dental Care" },
-              { icon: Sparkles, name: "Cosmetic Surgery" },
+              { icon: ShieldPlus, name: "Oncology" },
+              { icon: Eye, name: "Ophthalmology" },
+              { icon: Stethoscope, name: "Internal Medicine" },
+              { icon: Utensils, name: "Gastroenterology" },
+              { icon: Sparkles, name: "Dermatology" },
+              { icon: Droplets, name: "Hematology" },
+              { icon: Baby, name: "Gynecology" },
+              { icon: Users, name: "Pediatrics" },
+              { icon: Bone, name: "Orthopedics" },
+              { icon: Smile, name: "Dentists" },
+              { icon: Wind, name: "Pulmonology" },
+              { icon: Activity, name: "Nephrology" },
+              { icon: FlaskConical, name: "Urology" },
             ].map((item, i) => (
               <div className="treat-card" key={i}>
                 <div className="treat-icon-wrap">
@@ -397,10 +466,10 @@ export default function HomePage() {
       </section>
       {/* TREATMENTS end */}
       {/* doctors section start*/}
-      <section className="doctors-section">
+      <section className="doctors-section-home">
         <span className="doctors-badge">Expert Doctors</span>
 
-        <h2 className="doctors-title">World-Class Medical Specialists</h2>
+        <h2 className="doctors-title">Our Medical Specialists</h2>
 
         <p className="doctors-subtitle">
           Our network includes experienced, internationally trained doctors from
@@ -409,7 +478,7 @@ export default function HomePage() {
           for international patients.
         </p>
 
-        <div className="doctors-grid">
+        <div className="doctors-grid-home">
           {doctors.map((doc, index) => (
             <div className="doctor-card" key={index}>
               <div className="doctor-image">
@@ -425,8 +494,8 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className="hospitals-cta">
-          <p className="doctors-footer">
+        <div className="hospitals-cta-home">
+          <p className="doctors-footer-home">
             Our network includes 300+ specialist doctors across various medical
             fields
           </p>
@@ -499,7 +568,7 @@ export default function HomePage() {
 
       {/* how its work start*/}
 
-      <section className="cta-wrapper">
+      {/* <section className="cta-wrapper">
         <div className="cta-box">
           <div className="cta-text">
             <h2>How It Works</h2>
@@ -513,20 +582,34 @@ export default function HomePage() {
             Know More →
           </Link>
         </div>
+      </section> */}
+      {/* how its work end */}
+
+      <section className="study-hero">
+        <div className="overlay"></div>
+
+        <div className="hero-content">
+          <h1>How It Works</h1>
+          <p>
+            Understand our step-by-step process from consultation to complete
+            recovery. Quick, simple and fully transparent.
+          </p>
+
+          <div className="hero-buttons-home">
+            <Link to="/process" className="btn secondary">
+              Know More <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
       </section>
-      {/* how its work end /}
 
-
-
-      <Testimonials />
-
-     
+      {/* <Testimonials /> */}
 
       {/* CTA start*/}
 
       {/* cta end */}
 
-      <section className="blue-cta-section">
+      {/* <section className="blue-cta-section">
         <h2 className="blue-cta-title">
           Ready to Start Your Healthcare Journey?
         </h2>
@@ -540,7 +623,7 @@ export default function HomePage() {
             <Phone size={18} /> Call Now
           </a>
         </div>
-      </section>
+      </section> */}
       <Contactsection />
     </div>
   );

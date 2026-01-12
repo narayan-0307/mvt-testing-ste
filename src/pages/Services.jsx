@@ -92,19 +92,21 @@ export default function ServicesPage() {
     <>
       {/* HERO */}
       <section className="services-hero">
-        <span className="hero-badge">Our Services</span>
-        <h1>Complete Medical Travel Support</h1>
-        <p>
-          We provide end-to-end medical travel assistance, including treatment
-          coordination, hospital support, travel planning, and post-care
-          follow-up—making your healthcare journey simple and stress-free.
-        </p>
+        <div>
+          <span className="services-hero-badge">Our Services</span>
+          <h1>Complete Medical Travel Support</h1>
+          <p>
+            We provide end-to-end medical travel assistance, including treatment
+            coordination, hospital support, travel planning, and post-care
+            follow-up—making your healthcare journey simple and stress-free.
+          </p>
+        </div>
       </section>
 
       {/* SERVICES GRID */}
       <section className="services-section">
-        <div className="section-header">
-          <span className="hero-badge">What We Offer</span>
+        <div className="section-header-service">
+          <span className="hero-badge-service">What We Offer</span>
           <h2>Services Designed for International Patients</h2>
           <p>
             From your first inquiry to complete recovery, we're with you every
@@ -167,45 +169,44 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section> */}
-<section className="process-section">
-  <div className="section-header">
-    <span className="hero-badge">How It Works</span>
-    <h2>A Simple, Stress-Free Medical Journey</h2>
-    <p>
-      Our transparent process ensures smooth coordination from your first
-      inquiry to recovery, so you can focus on your health while we take
-      care of the rest.
-    </p>
-  </div>
+      <section className="process-section-services">
+        <div className="section-header-services">
+          <span className="hero-badge-services">How It Works</span>
+          <h2>A Simple, Stress-Free Medical Journey</h2>
+          <p>
+            Our transparent process ensures smooth coordination from your first
+            inquiry to recovery, so you can focus on your health while we take
+            care of the rest.
+          </p>
+        </div>
 
-  <div className="process-steps">
-    {[
-      "Share Your Medical Details",
-      "Expert Medical Consultation",
-      "Treatment Planning",
-      "Travel & Stay Arrangements",
-      "Treatment & Care",
-      "Recovery & Follow-up",
-    ].map((step, index) => (
-      <div className="process-card" key={index}>
-        <div className="step-circle">{index + 1}</div>
-        <span>{step}</span>
-      </div>
-    ))}
-  </div>
-  <div className="process-btn">
-<Link to="/process" className="primary-btn">
-      View Detailed Process <ArrowRight />
-    </Link>
-  </div>
-   
+        <div className="process-steps">
+          {[
+            "Share Your Medical Details",
+            "Expert Medical Consultation",
+            "Treatment Planning",
+            "Travel & Stay Arrangements",
+            "Treatment & Care",
+            "Recovery & Follow-up",
+          ].map((step, index) => (
+            <div className="process-card" key={index}>
+              <div className="step-circle">{index + 1}</div>
+              <span>{step}</span>
+            </div>
+          ))}
+        </div>
+        <div className="process-btn">
+          <Link to="/process" className="primary-btn">
+            View Detailed Process <ArrowRight />
+          </Link>
+        </div>
 
-  {/* <div className="process-cta">
+        {/* <div className="process-cta">
     <Link to="/process" className="primary-btn">
       View Detailed Process <ArrowRight />
     </Link>
   </div> */}
-</section>
+      </section>
 
       {/* CTA */}
       <section className="services-cta">

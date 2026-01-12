@@ -14,6 +14,7 @@ import Oman from "./pages/Oman";
 import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
+import ConnectWithUs from "./component/ConnectWithUs";
 
 function App() {
   return (
@@ -28,10 +29,10 @@ function App() {
         <Route path="/hospitals" element={<Hospitals />} />
         <Route path="/process" element={<Process />} />
         <Route path="/doctors" element={<Doctors />} />
-                <Route path="/oman" element={<Oman />} />
-
+        <Route path="/oman" element={<Oman />} />
       </Routes>
       <Footer />
+      <ConnectWithUs />
     </>
   );
 }

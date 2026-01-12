@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone } from "lucide-react";
 import "./Hospitals.css";
 
-import Apollo from "../assets/apollo.jpeg";
-import Manipal from "../assets/manipal.jpeg";
-import Fortis from "../assets/fortis.jpeg";
-import Narayana from "../assets/narayana.jpeg";
+import Apollo from "../assets/hospitals/apollo.jpeg";
+import Manipal from "../assets/hospitals/manipal.jpeg";
+import Fortis from "../assets/hospitals/fortis.jpeg";
+import Narayana from "../assets/hospitals/narayana.jpeg";
 import Aster from "../assets/aster.jpeg";
 import Max from "../assets/max.jpeg";
 import Care from "../assets/care.jpeg";
@@ -80,8 +80,7 @@ const hospitals = [
   {
     name: "KIMS Hospitals",
     logo: Kims,
-    description:
-      "One of India’s leading corporate healthcare groups.",
+    description: "One of India’s leading corporate healthcare groups.",
     accreditations: ["JCI", "NABH"],
     locations: ["Secunderabad", "Visakhapatnam", "Rajahmundry", "Maharashtra"],
     specialties: ["Multi-Specialty"],
@@ -101,74 +100,80 @@ export default function HospitalsPage() {
   return (
     <>
       {/* HERO */}
-      <section className="hospitals-hero">
-        <span className="hero-badge">Medical Specialties</span>
-        <h1>World-Class Treatments at Affordable Prices</h1>
-        <p>
-          Access India's finest specialists and cutting-edge medical technology
-          at a fraction of Western costs.
-        </p>
+      <section className="hospitals-hero-section">
+        <div>
+          <span className="hero-badge-hospitals">Medical Specialties</span>
+          <h1>World-Class Treatments at Affordable Prices</h1>
+          <p>
+            Access India's finest specialists and cutting-edge medical
+            technology at a fraction of Western costs.
+          </p>
+        </div>
       </section>
 
       {/* HOSPITAL LIST */}
-      <section className="partner-hospitals">
-        <div className="partner-header">
-          <span className="hero-badge">Hospital Network</span>
-          <h2>Our Partner Hospitals</h2>
-          <p>
-            We collaborate with India's most prestigious healthcare institutions.
-          </p>
-        </div>
 
-        <div className="partner-list">
-          {hospitals.map((h, i) => (
-            <div className="partner-card" key={i}>
-              
-              {/* LEFT */}
-              <div className="partner-left">
-                <div className="logo-placeholder">
-                  <img src={h.logo} alt={h.name} />
+      <section className="partner-hospitals-main">
+        <div className="partner-hospitals-subsection">
+          <div className="partner-header">
+            <span className="partner-hospitals-hero-badge">
+              Hospital Network
+            </span>
+            <h2>Our Partner Hospitals</h2>
+            <p>
+              We collaborate with India's most prestigious healthcare
+              institutions.
+            </p>
+          </div>
+
+          <div className="partner-list">
+            {hospitals.map((h, i) => (
+              <div className="partner-card" key={i}>
+                {/* LEFT */}
+                <div className="partner-left">
+                  <div className="logo-placeholder">
+                    <img src={h.logo} alt={h.name} />
+                  </div>
+
+                  <h3>{h.name}</h3>
+
+                  <div className="accreditations">
+                    {h.accreditations.map((a, idx) => (
+                      <span key={idx}>{a}</span>
+                    ))}
+                  </div>
                 </div>
 
-                <h3>{h.name}</h3>
+                {/* MIDDLE */}
+                <div className="partner-middle">
+                  <p className="partner-desc">{h.description}</p>
 
-                <div className="accreditations">
-                  {h.accreditations.map((a, idx) => (
-                    <span key={idx}>{a}</span>
-                  ))}
+                  <div className="specialties">
+                    {h.specialties.map((s, idx) => (
+                      <span key={idx}>{s}</span>
+                    ))}
+                  </div>
+
+                  <div className="locations">
+                    <MapPin size={16} />
+                    {h.locations.join(" • ")}
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="partner-right">
+                  <a
+                    href="https://wa.me/918655835979"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary-btn"
+                  >
+                    Get Treatment Quote
+                  </a>
                 </div>
               </div>
-
-              {/* MIDDLE */}
-              <div className="partner-middle">
-                <p className="partner-desc">{h.description}</p>
-
-                <div className="specialties">
-                  {h.specialties.map((s, idx) => (
-                    <span key={idx}>{s}</span>
-                  ))}
-                </div>
-
-                <div className="locations">
-                  <MapPin size={16} />
-                  {h.locations.join(" • ")}
-                </div>
-              </div>
-
-              {/* RIGHT */}
-              <div className="partner-right">
-                <a
-                  href="https://wa.me/918655835979"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="primary-btn"
-                >
-                  Get Treatment Quote
-                </a>
-              </div>
-
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

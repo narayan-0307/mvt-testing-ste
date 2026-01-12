@@ -1,0 +1,272 @@
+/* ==================== FLOATING WIDGET ==================== */
+.connect-widget-container {
+  position: fixed;
+  bottom: 6rem;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Prompt message */
+.connect-widget-prompt {
+  background: #ffffff;
+  color: #0f1f38;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+  animation: slideInLeft 0.4s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Main floating button */
+.connect-widget-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.connect-widget-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
+}
+
+.connect-widget-button.open {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.35);
+}
+
+.connect-widget-button.open:hover {
+  box-shadow: 0 12px 35px rgba(220, 53, 69, 0.45);
+}
+
+/* ==================== CONTACT PANEL ==================== */
+.connect-widget-panel {
+  position: fixed;
+  bottom: 11rem;
+  right: 25px;
+  width: 360px;
+  max-height: 550px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: slideInUp 0.35s ease;
+  z-index: 9998;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Panel header */
+.connect-widget-header {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.connect-widget-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.connect-widget-header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.92;
+}
+
+/* Note section */
+.connect-widget-note {
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border-left: 3px solid #25d366;
+  font-size: 12px;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Options container */
+.connect-widget-options {
+  padding: 14px 10px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.connect-widget-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.connect-widget-options::-webkit-scrollbar-track {
+  background: #f1f3f5;
+}
+
+.connect-widget-options::-webkit-scrollbar-thumb {
+  background: #25d366;
+  border-radius: 10px;
+}
+
+/* Individual option button */
+.connect-option-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.connect-option-item:hover {
+  background: #f8fff9;
+  border-color: #25d366;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.12);
+}
+
+.connect-option-item:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+/* Option icon */
+.option-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.connect-option-item.phone .option-icon {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.connect-option-item.email .option-icon {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+/* Option label */
+.option-label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f1f38;
+}
+
+.option-detail {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+/* Arrow icon */
+.option-arrow {
+  color: #25d366;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.connect-option-item:hover .option-arrow {
+  transform: translateX(4px);
+}
+
+.connect-option-item.phone .option-arrow {
+  color: #007bff;
+}
+
+.connect-option-item.email .option-arrow {
+  color: #dc3545;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 600px) {
+  .connect-widget-panel {
+    width: calc(100vw - 30px);
+    right: 15px;
+    bottom: 90px;
+  }
+
+  .connect-widget-container {
+    bottom: 20px;
+    right: 15px;
+  }
+
+  .connect-widget-prompt {
+    display: none;
+  }
+
+  .connect-widget-button {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 400px) {
+  .connect-widget-panel {
+    max-height: calc(100vh - 120px);
+  }
+
+  .connect-widget-options {
+    max-height: calc(100vh - 240px);
+  }
+}

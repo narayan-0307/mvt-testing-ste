@@ -29,10 +29,10 @@ import "./Home.css";
 import heroImage from "../assets/react.svg";
 import Testimonials from "../component/Testimonials";
 import Contactsection from "../component/Contactsection";
-import Apollo from "../assets/apollo.jpeg";
-import Manipal from "../assets/manipal.jpeg";
-import Fortis from "../assets/fortis.jpeg";
-import Narayana from "../assets/narayana.jpeg";
+import Apollo from "../assets/hospitals/apollo.jpeg";
+import Manipal from "../assets/hospitals/manipal.jpeg";
+import Fortis from "../assets/hospitals/fortis.jpeg";
+import Narayana from "../assets/hospitals/narayana.jpeg";
 
 import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
 import Balkrisnan from "../assets/docters/balakrishna.jpeg";
