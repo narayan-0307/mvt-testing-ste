@@ -15,12 +15,12 @@ import Oman from "./pages/Oman";
 import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-import ConnectWithUs from "./component/ConnectWithUs";
+import ConnectWithUs from "./component/ConnectWithUsWhatsapp";
+import ConnectWithUsCall from "./component/ConnectWithUsCall";
 import TermsAndConditionsPage from "./pages/terms-and-conditions";
 import PrivacyPolicyPage from "./pages/privacy-policy";
 
 import Translate from "./pages/Translate";
-
 function App() {
   return (
     <>
@@ -46,6 +46,7 @@ function App() {
 
       <Footer />
       <ConnectWithUs />
+      <ConnectWithUsCall />
     </>
   );
 }

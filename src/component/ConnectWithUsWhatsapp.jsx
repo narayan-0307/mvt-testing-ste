@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { MessageCircle, Phone, Mail, X } from "lucide-react";
-import "./ConnectWithUs.css";
+import React, { useState, useRef, useEffect } from "react";
+import { MessageCircle, X } from "lucide-react";
+import "./ConnectWithUsWhatsapp.css";
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ size = 22 }) => (
@@ -17,44 +17,71 @@ const WhatsAppIcon = ({ size = 22 }) => (
 
 export default function ConnectWithUs() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false); // keep mounted for close animation
+  const panelRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const toggleWidget = () => {
-    setIsOpen(!isOpen);
+  const openWidget = () => {
+    setMounted(true);
+    // allow mount then open to trigger animation
+    requestAnimationFrame(() => setIsOpen(true));
   };
 
-  // Contact options with different countries/regions
-  const contactOptions = [
-    {
-      type: "whatsapp",
-      label: "WhatsApp",
-      number: "+91 8655835979",
-      icon: <WhatsAppIcon size={22} />,
-    },
-    {
-      type: "phone",
-      label: "Call Us",
-      number: "+91 86558 35979",
-      icon: <Phone size={22} />,
-    },
-    {
-      type: "email",
-      label: "Email Us",
-      email: "medicaltourism@humancareworldwide.com",
-      icon: <Mail size={22} />,
-    },
+  const closeWidget = () => {
+    setIsOpen(false);
+    // wait for animation then unmount
+    setTimeout(() => setMounted(false), 260);
+  };
+
+  const toggleWidget = () => {
+    if (isOpen) closeWidget();
+    else openWidget();
+  };
+
+  // Multiple WhatsApp contacts for different countries
+  const whatsappContacts = [
+    { country: "India", number: "+919833166697" },
+    { country: "UAE", number: "+971509720339" },
+    { country: "Oman", number: "+96892402959" },
+    // { country: "Bangladesh", number: "+8801314968067" },
+    // { country: "UK", number: "+447557070702" },
   ];
+
+  // We only display per-country WhatsApp contacts now
 
   const handleContactClick = (option) => {
     if (option.type === "whatsapp") {
-      // Remove + and spaces from number for WhatsApp URL
-      const cleanNumber = option.number.replace(/[\s+]/g, "");
+      const cleanNumber = option.number.replace(/[^\d]/g, "");
       window.open(`https://wa.me/${cleanNumber}`, "_blank");
+    } else if (option.type === "whatsapp-group") {
+      // noop for group header, handled by per-country buttons
+      return;
     } else if (option.type === "phone") {
       window.location.href = `tel:${option.number}`;
     } else if (option.type === "email") {
       window.location.href = `mailto:${option.email}`;
     }
   };
+
+  // close when clicking outside panel/button
+  useEffect(() => {
+    function onDocClick(e) {
+      if (!mounted) return;
+      const panel = panelRef.current;
+      const btn = buttonRef.current;
+      if (
+        panel &&
+        !panel.contains(e.target) &&
+        btn &&
+        !btn.contains(e.target)
+      ) {
+        closeWidget();
+      }
+    }
+
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, [mounted, isOpen]);
 
   return (
     <>
@@ -65,6 +92,7 @@ export default function ConnectWithUs() {
         )}
 
         <button
+          ref={buttonRef}
           className={`connect-widget-button ${isOpen ? "open" : ""}`}
           onClick={toggleWidget}
           aria-label="Get in touch"
@@ -74,8 +102,11 @@ export default function ConnectWithUs() {
       </div>
 
       {/* Contact Options Panel */}
-      {isOpen && (
-        <div className="connect-widget-panel">
+      {mounted && (
+        <div
+          className={`connect-widget-panel ${isOpen ? "open" : "closed"}`}
+          ref={panelRef}
+        >
           <div className="connect-widget-header">
             <MessageCircle size={24} />
             <div>
@@ -84,32 +115,26 @@ export default function ConnectWithUs() {
             </div>
           </div>
 
-          {/* <div className="connect-widget-note">
-            The team typically replies in a few minutes
-          </div> */}
-
           <div className="connect-widget-options">
-            {contactOptions.map((option, index) => (
-              <button
-                key={index}
-                className={`connect-option-item ${option.type}`}
-                onClick={() => handleContactClick(option)}
-              >
-                <div className="option-icon">{option.icon}</div>
-                <div className="option-label">
-                  {option.label}
-                  {option.type === "email" && (
-                    <span className="option-detail">{option.email}</span>
-                  )}
-                  {option.type === "phone" && (
-                    <span className="option-detail">{option.number}</span>
-                  )}
-                </div>
-                <div className="option-arrow">
-                  <MessageCircle size={18} />
-                </div>
-              </button>
-            ))}
+            <div className="whatsapp-country-list">
+              {whatsappContacts.map((c, ci) => (
+                <button
+                  key={ci}
+                  className="connect-option-item whatsapp-country"
+                  onClick={() =>
+                    handleContactClick({ type: "whatsapp", number: c.number })
+                  }
+                >
+                  <div className="option-icon small">
+                    <WhatsAppIcon size={18} />
+                  </div>
+                  <div className="option-label">
+                    {c.country}
+                    <span className="option-detail">{c.number}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}

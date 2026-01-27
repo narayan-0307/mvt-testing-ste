@@ -1,0 +1,145 @@
+/* wrapper kept for state class only; individual elements positioned independently */
+.call-widget {
+  position: relative;
+  z-index: 9999;
+}
+
+.call-toggle {
+  position: fixed;
+  left: 25px;
+  bottom: 6rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.call-panel {
+  position: fixed;
+  left: 22px;
+  top: 360px;
+  width: 360px;
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.12);
+  overflow: hidden;
+  transform-origin: left top;
+  transform: translateY(-8px) scale(0.98);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.call-widget.open .call-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.call-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+  color: #fff;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.call-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-sub {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.call-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.call-list {
+  padding: 10px;
+  max-height: 395px;
+  overflow-y: auto;
+}
+
+.call-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #eef2ff;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.call-item:hover {
+  background: #f8fbff;
+  transform: translateX(4px);
+}
+
+.call-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e6f0ff 0%, #cfe1ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  flex-shrink: 0;
+}
+
+.call-text {
+  text-align: left;
+}
+
+.call-country {
+  font-weight: 600;
+  color: #0b2545;
+}
+
+.call-number {
+  font-size: 13px;
+  color: #3b516a;
+}
+
+@media (max-width: 600px) {
+  .call-panel {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 27rem;
+    width: auto;
+    max-height: calc(100vh - 140px);
+    border-radius: 10px;
+    /* keep closed state by default; open state controlled by .call-widget.open .call-panel */
+  }
+
+  .call-toggle {
+    left: 12px;
+    bottom: 1.6rem;
+    width: 52px;
+    height: 52px;
+  }
+}

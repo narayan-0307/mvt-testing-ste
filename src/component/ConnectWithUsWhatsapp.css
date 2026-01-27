@@ -87,7 +87,6 @@
   border-radius: 14px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  /* initial state handled via classes for smooth open/close */
   transition:
     transform 0.26s ease,
     opacity 0.26s ease;
@@ -107,7 +106,7 @@
   }
 }
 
-/* explicit open/closed classes */
+/* open/closed states for smooth animations */
 .connect-widget-panel.open {
   transform: translateY(0) scale(1);
   opacity: 1;
@@ -284,7 +283,11 @@
   .connect-widget-panel {
     width: calc(100vw - 30px);
     right: 15px;
-    top: 5rem;
+    top: 25rem;
+    left: 15px;
+    right: 15px;
+    border-radius: 10px;
+    max-height: calc(100vh - 120px);
   }
 
   .connect-widget-container {
