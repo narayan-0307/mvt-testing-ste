@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 const Translate = () => {
   useEffect(() => {
+<<<<<<< HEAD
     // Load Google Translate Script
     const script = document.createElement("script");
     script.src =
@@ -66,13 +67,28 @@ const Translate = () => {
 
     const observer = new MutationObserver(() => hideTranslateElements());
     observer.observe(document.body, { childList: true, subtree: true });
+=======
+    if (!window.googleTranslateLoaded) {
+      const script = document.createElement("script");
+      script.src =
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+      window.googleTranslateLoaded = true;
+    }
+
+>>>>>>> 098195b4ae85453112740c557962e54756034bba
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "en",
+<<<<<<< HEAD
+=======
+          includedLanguages: "en,ar,bn",
+>>>>>>> 098195b4ae85453112740c557962e54756034bba
           autoDisplay: false,
         },
-        "google_translate_element",
+        "google_translate_element"
       );
     };
 
@@ -94,6 +110,7 @@ const Translate = () => {
     };
   }, []);
 
+<<<<<<< HEAD
   // Trigger language change
   const changeLanguage = (lang) => {
     const select = document.querySelector(".goog-te-combo");
@@ -162,4 +179,14 @@ const styles = {
   },
 };
 
+=======
+  return (
+    <div
+      id="google_translate_element"
+      style={{ opacity: 0, height: 0, pointerEvents: "none", position: "fixed" }}
+    ></div>
+  );
+};
+
+>>>>>>> 098195b4ae85453112740c557962e54756034bba
 export default Translate;
