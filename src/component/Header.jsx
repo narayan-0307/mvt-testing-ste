@@ -198,13 +198,9 @@ const Header = () => {
                 onChange={(e) => handleLangChange(e.target.value)}
                 className="lang-select"
               >
-                <option value="">Select Language</option>
                 <option value="en">English</option>
-                <option value="mr">Marathi</option>
-                <option value="hi">Hindi</option>
-                <option value="ur">Urdu</option>
-                <option value="fr">French</option>
-                <option value="es">Spanish</option>
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
               </select>
             </div>
             {/* Mobile Menu Button */}
