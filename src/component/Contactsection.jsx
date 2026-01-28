@@ -65,29 +65,43 @@ export default function ContactSection() {
             line.
           </p>
 
-          <div className="contact-card emergency">
+          <a
+            className="contact-card emergency"
+            href="tel:+918655835979"
+            aria-label="Call Emergency +91 86558 35979"
+          >
             <Phone className="contact-icon red" />
             <div>
               <h4>Emergency 24/7</h4>
               <p>+91 86558 35979</p>
             </div>
-          </div>
+          </a>
 
-          <div className="contact-card whatsapp">
+          <a
+            className="contact-card whatsapp"
+            href="https://wa.me/918655835979"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp +91 86558 35979"
+          >
             <WhatsAppIcon className="contact-icon green" />
             <div>
               <h4>Whatsapp Us</h4>
               <p>+91 86558 35979</p>
             </div>
-          </div>
+          </a>
 
-          <div className="contact-card email">
+          <a
+            className="contact-card email"
+            href="mailto:medicaltourism@humancareworldwide.com"
+            aria-label="Email General Inquiries"
+          >
             <Mail className="contact-icon blue" />
             <div>
               <h4>General Inquiries</h4>
               <p>medicaltourism@humancareworldwide.com</p>
             </div>
-          </div>
+          </a>
 
           <div className="contact-card address">
             <MapPin className="contact-icon gray" />

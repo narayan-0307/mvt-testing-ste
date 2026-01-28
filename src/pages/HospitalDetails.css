@@ -6,7 +6,8 @@
 }
 .hospital-details-banner.pro-banner {
   min-height: 650px;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   display: flex;
   align-items: flex-end;
@@ -144,3 +145,177 @@
   }
 }
 /* --- End Professional Hospital Details Section Redesign --- */
+
+/* =========================================================
+   EXTRA SMALL PHONES (0 - 480px)
+========================================================= */
+@media (max-width: 480px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 260px;
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    background-size: cover;
+  }
+
+  .hospital-details-title.pro-title {
+    font-size: 1.5rem;
+  }
+
+  .hospital-details-address.pro-address {
+    font-size: 0.9rem;
+  }
+
+  .hospital-details-about.pro-about p {
+    font-size: 0.95rem;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 100%;
+    padding: 0 14px;
+  }
+
+  .hc-specialty-chip.pro-chip {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .hc-book-btn.pro-whatsapp-btn {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  .btn.pro-back-btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES / LARGE MOBILES (481px - 600px)
+========================================================= */
+@media (min-width: 481px) and (max-width: 600px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 320px;
+    width: 100vw;
+    margin: 0;
+    background-size: cover;
+  }
+
+  .hospital-details-title.pro-title {
+    font-size: 1.7rem;
+  }
+
+  .hospital-details-container.pro-container {
+    padding: 0 18px;
+  }
+}
+
+/* =========================================================
+   TABLETS PORTRAIT (601px - 768px)
+========================================================= */
+@media (min-width: 601px) and (max-width: 768px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 380px;
+    width: 92vw;
+  }
+
+  .hospital-details-title.pro-title {
+    font-size: 1.9rem;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 92%;
+  }
+}
+
+/* =========================================================
+   TABLETS LANDSCAPE (769px - 1024px)
+========================================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 460px;
+    width: 80vw;
+  }
+
+  .hospital-details-title.pro-title {
+    font-size: 2rem;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 900px;
+  }
+}
+
+/* =========================================================
+   LAPTOPS (1025px - 1280px)
+========================================================= */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 520px;
+    width: 65vw;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 960px;
+  }
+}
+
+/* =========================================================
+   DESKTOPS (1281px - 1440px)
+========================================================= */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 620px;
+    width: 58vw;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 1040px;
+  }
+}
+
+/* =========================================================
+   LARGE SCREENS / 4K (1441px+)
+========================================================= */
+@media (min-width: 1441px) {
+  .hospital-details-banner.pro-banner {
+    min-height: 700px;
+    width: 52vw;
+  }
+
+  .hospital-details-container.pro-container {
+    max-width: 1120px;
+  }
+}
+
+/* ================= FIX CLICK ISSUE BELOW 600PX ================= */
+
+/* Ensure hero section never blocks clicks */
+.hospitals-hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Bring hospital page above hero */
+.hospital-details-page {
+  position: relative;
+  z-index: 5;
+}
+
+/* Make sure buttons always receive touch */
+.hospital-contact-row,
+.hc-book-btn,
+.pro-back-btn {
+  position: relative;
+  z-index: 10;
+}
+
+/* Optional safety: prevent any hidden overlay */
+.hospital-details-banner {
+  pointer-events: none;
+}
+
+.hospital-details-banner-inner {
+  pointer-events: auto;
+}

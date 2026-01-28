@@ -47,7 +47,7 @@ const _mockHospitalData = [
       "Robotic & Minimally Invasive Surgery",
     ],
     image: Apollo,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["CBD Belapur, Navi Mumbai"],
     tabsLocation: ["India"],
   },
@@ -72,7 +72,7 @@ const _mockHospitalData = [
       "Robotic Surgery",
     ],
     image: Manipal,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Goa", "Hyderabad", "Bangalore", "Kolkata"],
     tabsLocation: ["India"],
   },
@@ -95,7 +95,7 @@ const _mockHospitalData = [
       "Radiology & Diagnostics",
     ],
     image: Fortis,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Delhi", "Mulund, Mumbai"],
     tabsLocation: ["India"],
   },
@@ -118,7 +118,7 @@ const _mockHospitalData = [
       "Endocrinology",
     ],
     image: Narayana,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["India"],
     tabsLocation: ["India"],
   },
@@ -142,7 +142,7 @@ const _mockHospitalData = [
       "Radiology & Diagnostics",
     ],
     image: Aster,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Kochi"],
     tabsLocation: ["India"],
   },
@@ -165,7 +165,7 @@ const _mockHospitalData = [
       "Nephrology & Urology",
     ],
     image: Max,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["India"],
     tabsLocation: ["India"],
   },
@@ -188,7 +188,7 @@ const _mockHospitalData = [
       "Radiology & Imaging",
     ],
     image: Care,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["India"],
     tabsLocation: ["India"],
   },
@@ -211,7 +211,7 @@ const _mockHospitalData = [
       "Radiology & Diagnostics",
     ],
     image: Kims,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Kerala"],
     tabsLocation: ["India"],
   },
@@ -235,7 +235,7 @@ const _mockHospitalData = [
       "Radiology & Imaging",
     ],
     image: Medicover,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Hyderabad"],
     tabsLocation: ["India"],
   },
@@ -261,7 +261,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging & Laboratory Services",
     ],
     image: Guven,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Ankara, Turkey"],
     tabsLocation: ["Turkey"],
   },
@@ -285,7 +285,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging & Advanced Technology Services",
     ],
     image: Medipol,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Turkey"],
     tabsLocation: ["Turkey"],
   },
@@ -309,7 +309,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging & Comprehensive Health Screening",
     ],
     image: Liv,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Turkey", "Azerbaijan", "Hungary"],
     tabsLocation: ["Turkey"],
   },
@@ -333,7 +333,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging & Laboratory Services",
     ],
     image: Kpj,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Malaysia", "Indonesia", "Thailand", "Bangladesh"],
     tabsLocation: ["Malaysia"],
   },
@@ -354,7 +354,7 @@ const _mockHospitalData = [
       "Inpatient & Day Surgery Care",
     ],
     image: Crawfurd,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Singapore"],
     tabsLocation: ["Singapore"],
   },
@@ -377,7 +377,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging",
     ],
     image: MountElizabeth,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Singapore"],
     tabsLocation: ["Singapore"],
   },
@@ -398,7 +398,7 @@ const _mockHospitalData = [
       "Corporate Healthcare Solutions",
     ],
     image: Raffles,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Singapore", "China", "Japan", "Vietnam", "Cambodia"],
     tabsLocation: ["Singapore"],
   },
@@ -421,7 +421,7 @@ const _mockHospitalData = [
       "Diagnostic Imaging",
     ],
     image: Gleneagles,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Singapore", "Malaysia"],
     tabsLocation: ["Singapore", "Malaysia"],
   },
@@ -444,7 +444,7 @@ const _mockHospitalData = [
       "Health Screening",
     ],
     image: Phyathai,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Thailand"],
     tabsLocation: ["Thailand"],
   },
@@ -467,7 +467,7 @@ const _mockHospitalData = [
       "Robotic Surgery",
     ],
     image: Bangkok,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Thailand"],
     tabsLocation: ["Thailand"],
   },
@@ -490,7 +490,7 @@ const _mockHospitalData = [
       "Preventive Medicine",
     ],
     image: Samitivej,
-    phone: "+918655835979",
+    phone: "+919833166697",
     locations: ["Thailand"],
     tabsLocation: ["Thailand"],
   },
@@ -593,9 +593,9 @@ export default function HospitalsPage() {
 
       <section>
         <div className="main-hospitals-card">
-          {filteredHospitals.map((h) => (
+          {filteredHospitals.map((h, idx) => (
             <Link
-              key={h.id}
+              key={`${h.id}-${idx}`}
               to={`/hospital-details/${h.id}`}
               className="hc-card-link"
             >
@@ -610,12 +610,12 @@ export default function HospitalsPage() {
                     <h2 className="hc-title">{h.name}</h2>
                     <div className="hc-address">{h.address}</div>
 
-                    <p className="hc-desc">{h.desc}</p>
+                    <p className="hc-desc">{h.desc.slice(0, 100)}...</p>
                   </div>
 
                   <div className="hc-info-row">
                     <div className="hc-specialties">
-                      {h.specialties.slice(0, 4).map((s, i) => (
+                      {h.specialties.slice(0, 2).map((s, i) => (
                         <span key={i} className="hc-specialty-chip">
                           {s}
                         </span>

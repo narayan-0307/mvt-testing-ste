@@ -7,8 +7,8 @@ export default function ConnectWithUsCall() {
 
   const contacts = [
     { country: "India", number: "+91 98331 66697" },
-    { country: "UAE", number: "+971 585787878" },
-    { country: "Oman", number: "+968 92402959" },
+    { country: "UAE", number: "+971 50 954 8452" },
+    { country: "Oman", number: "+968 98882797" },
     // { country: "Bangladesh", number: "+8801314968067" },
     // { country: "UK", number: "+44 1234 567 890" },
   ];

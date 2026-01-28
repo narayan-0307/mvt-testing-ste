@@ -77,7 +77,10 @@ export default function HospitalDetails() {
           <div className="hospital-contact-row pro-contact-row">
             <a
               className="hc-book-btn pro-whatsapp-btn"
-              href={`https://wa.me/${hospital.phone.replace(/[^0-9+]/g, "")}?text=${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=${hospital.phone.replace(
+                /[^0-9]/g,
+                "",
+              )}&text=${encodeURIComponent(
                 `Hello, I want to book an appointment at ${hospital.name}`,
               )}`}
               target="_blank"

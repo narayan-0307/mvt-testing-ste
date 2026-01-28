@@ -238,6 +238,54 @@ const Header = () => {
               <option value="fr">French</option>
               <option value="es">Spanish</option>
             </select>
+
+            {/* Mobile Social Links (shown on very small screens) */}
+            <div className="mobile-social-links">
+              <div className="social-links">
+                <a
+                  href="https://www.facebook.com/humancareworldwide/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook size={15} />
+                </a>
+                <a
+                  href="https://x.com/wwhumancare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter size={15} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={15} />
+                </a>
+                <a
+                  href="https://wa.me/+918655835979"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp size={15} />
+                </a>
+                <a
+                  href="https://www.instagram.com/humancareworldwideofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram size={15} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@HumancareWorldWide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Youtube size={15} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

@@ -2,7 +2,7 @@
 .header-wrapper {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 10060; /* raised so header controls sit above floating widgets */
   width: 100%;
 }
 /* Social icons and link styles (used in header and mobile blocks) */
@@ -90,6 +90,20 @@
   background: #fff;
   color: #111827;
   font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  /* ensure the language selector is on top of other floating elements */
+  .header-controls {
+    position: relative;
+    z-index: 10070;
+  }
+
+  .header-controls .lang-select {
+    position: relative;
+    z-index: 10080;
+    pointer-events: auto;
+  }
 }
 
 .lang-select.mobile {
@@ -317,6 +331,23 @@
     border-radius: 50%;
     background-color: #001f54;
     color: #fff;
+  }
+
+  /* Hide desktop language selector on very small screens, use mobile select inside nav */
+  .header-controls .lang-select {
+    display: none;
+  }
+
+  .nav-mobile .lang-select.mobile {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Ensure mobile nav sits above other content and language selector appears below links */
+  .nav-mobile {
+    position: relative;
+    z-index: 9999;
   }
 }
 

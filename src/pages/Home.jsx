@@ -340,7 +340,7 @@ export default function HomePage() {
             </h2>
 
             <p className="about-subtext">
-              Humnacare Medical Value Travel is a leading medical tourism and
+              Humanacare Medical Value Travel is a leading medical tourism and
               patient transfer company with 21+ years of experience in
               connecting international patients to world-class healthcare in
               India and across the globe.

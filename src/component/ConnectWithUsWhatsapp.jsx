@@ -40,9 +40,9 @@ export default function ConnectWithUs() {
 
   // Multiple WhatsApp contacts for different countries
   const whatsappContacts = [
-    { country: "India", number: "+919833166697" },
-    { country: "UAE", number: "+971509720339" },
-    { country: "Oman", number: "+96892402959" },
+    { country: "India", number: "+91 98331 66697" },
+    { country: "UAE", number: "+971 50 954 8452" },
+    { country: "Oman", number: "+968 98882797" },
     // { country: "Bangladesh", number: "+8801314968067" },
     // { country: "UK", number: "+447557070702" },
   ];

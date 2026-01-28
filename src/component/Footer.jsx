@@ -176,11 +176,12 @@ export default function Footer({ onNavigate }) {
         <div className="footer-bottom">
           <p>© 2024 HumanCare MVT. All rights reserved.</p>
           <div>
+            <span>|</span>
             <a href="/privacy-policy">Privacy Policy</a>
             <span>|</span>
             <a href="/terms-and-conditions">Terms of Service</a>
             <span>|</span>
-            <a href="#">Refund Policy</a>
+            {/* <a href="#">Refund Policy</a> */}
           </div>
         </div>
       </div>

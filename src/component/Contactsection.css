@@ -88,6 +88,72 @@
   align-items: center;
 }
 
+/* Transitions and hover/focus effects for left-side contact cards (smoothed) */
+.contact-card {
+  transition:
+    transform 320ms cubic-bezier(0.16, 0.84, 0.26, 1),
+    box-shadow 320ms cubic-bezier(0.16, 0.84, 0.26, 1),
+    border-color 320ms cubic-bezier(0.16, 0.84, 0.26, 1);
+  will-change: transform, box-shadow;
+}
+
+/* Make anchor-based cards show pointer and be keyboard-focusable */
+.contact-card[href],
+.contact-card[role="link"],
+.contact-card a.contact-card {
+  cursor: pointer;
+}
+
+.contact-card:hover,
+.contact-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(10, 23, 84, 0.1);
+  border: 1px solid var(--blue, #0056d6);
+}
+
+.contact-card:active {
+  transform: translateY(-2px);
+}
+
+/* Slight icon pop on hover */
+.contact-card:hover .contact-icon,
+.contact-card:focus-within .contact-icon {
+  transform: scale(1.04);
+}
+
+/* Accessible focus ring for keyboard users */
+.contact-card:focus-within {
+  outline: none;
+  box-shadow:
+    0 10px 26px rgba(10, 23, 84, 0.07),
+    0 0 0 4px rgba(0, 86, 214, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card,
+  .contact-card .contact-icon {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Clickable card behavior when anchor is used */
+.contact-card[href],
+.contact-card[role="link"],
+.contact-card a.contact-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-card.whatsapp {
+  cursor: pointer;
+}
+
+.contact-card.whatsapp:hover {
+  filter: brightness(0.98);
+  transform: translateY(-2px);
+}
+
 /* Icon sizing (lucid icons) */
 .contact-icon {
   width: 44px;
