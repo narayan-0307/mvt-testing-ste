@@ -39,23 +39,23 @@ import "./Home.css";
 import heroImage from "../assets/react.svg";
 import Testimonials from "../component/Testimonials";
 import Contactsection from "../component/Contactsection";
-import Apollo from "../assets/hospitals/apollo-1.jpeg";
-import Aster from "../assets/hospitals/aster-11.png";
-import Fortis from "../assets/hospitals/fortis.jpeg";
-import Gleneagles from "../assets/hospitals/gleneagles.jpeg";
-import Hcg from "../assets/hospitals/hcg.jpeg";
-import Kims from "../assets/hospitals/kims-1.jpeg";
-import Kokilaben from "../assets/hospitals/kokilaben-1.jpeg";
-import Manipal from "../assets/hospitals/manipal.jpeg";
-import Medanta from "../assets/hospitals/medanta.jpeg";
-import Medicover from "../assets/hospitals/medicover.jpeg";
-import Nanavati from "../assets/hospitals/nanavati.jpeg";
-import Narayana from "../assets/hospitals/narayana.jpeg";
+import Apollo from "../assets/hospitals/apollo-1.webp";
+import Aster from "../assets/hospitals/aster-11.webp";
+import Fortis from "../assets/hospitals/fortis.webp";
+import Gleneagles from "../assets/hospitals/gleneagles.webp";
+import Hcg from "../assets/hospitals/hcg.webp";
+import Kims from "../assets/hospitals/kims-1.webp";
+import Kokilaben from "../assets/hospitals/kokilaben-1.webp";
+import Manipal from "../assets/hospitals/manipal.webp";
+import Medanta from "../assets/hospitals/medanta.webp";
+import Medicover from "../assets/hospitals/medicover.webp";
+import Nanavati from "../assets/hospitals/nanavati.webp";
+import Narayana from "../assets/hospitals/narayana.webp";
 
-import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
-import Balkrisnan from "../assets/docters/balakrishna.jpeg";
-import Fatuque from "../assets/docters/fatuque-udwadia.jpeg";
-import Nageshwar from "../assets/docters/nageshwar-reddy.jpeg";
+import Narendra from "../assets/docters/dr-naresh-trehan.webp";
+import Balkrisnan from "../assets/docters/balakrishna.webp";
+import Fatuque from "../assets/docters/fatuque-udwadia.webp";
+import Nageshwar from "../assets/docters/nageshwar-reddy.webp";
 
 const hospitals = [
   {

@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import "./Hospitals.css";
 import { Helmet } from "react-helmet";
 
-import Apollo from "../assets/hospitals-photos/apollo.jpeg";
-import Manipal from "../assets/hospitals-photos/manipal.jpeg";
-import Fortis from "../assets/hospitals-photos/fortis.jpeg";
-import Narayana from "../assets/hospitals-photos/narayana.jpeg";
-import Aster from "../assets/hospitals-photos/aster.jpeg";
-import Max from "../assets/hospitals-photos/max.jpeg";
-import Care from "../assets/hospitals-photos/care.jpeg";
-import Kims from "../assets/hospitals-photos/kims.jpeg";
-import Medicover from "../assets/hospitals-photos/medicover.jpeg";
+import Apollo from "../assets/hospitals-photos/apollo.webp";
+import Manipal from "../assets/hospitals-photos/manipal.webp";
+import Fortis from "../assets/hospitals-photos/fortis.webp";
+import Narayana from "../assets/hospitals-photos/narayana.webp";
+import Aster from "../assets/hospitals-photos/aster.webp";
+import Max from "../assets/hospitals-photos/max.webp";
+import Care from "../assets/hospitals-photos/care.webp";
+import Kims from "../assets/hospitals-photos/kims.webp";
+import Medicover from "../assets/hospitals-photos/medicover.webp";
 
-import Samitivej from "../assets/hospitals-photos/samitivej-hospital.jpeg";
-import Bangkok from "../assets/hospitals-photos/Bangkok-hospital.jpeg";
-import Phyathai from "../assets/hospitals-photos/phythai-1&2-hospital.jpeg";
-import Gleneagles from "../assets/hospitals-photos/gleneagles-hospital-singapore.jpeg";
-import Raffles from "../assets/hospitals-photos/raffles-hospital.jpeg";
-import MountElizabeth from "../assets/hospitals-photos/mount-elizabeth-hospital.jpeg";
-import Crawfurd from "../assets/hospitals-photos/crawfurd-hospital.jpeg";
-import Kpj from "../assets/hospitals-photos/kpj-hospital.jpeg";
-import Liv from "../assets/hospitals-photos/liv-hospital.jpeg";
-import Medipol from "../assets/hospitals-photos/medipol-hospital.jpeg";
-import Guven from "../assets/hospitals-photos/guven.jpeg";
+import Samitivej from "../assets/hospitals-photos/samitivej-hospital.webp";
+import Bangkok from "../assets/hospitals-photos/Bangkok-hospital.webp";
+import Phyathai from "../assets/hospitals-photos/phythai-1&2-hospital.webp";
+import Gleneagles from "../assets/hospitals-photos/gleneagles-hospital-singapore.webp";
+import Raffles from "../assets/hospitals-photos/raffles-hospital.webp";
+import MountElizabeth from "../assets/hospitals-photos/mount-elizabeth-hospital.webp";
+import Crawfurd from "../assets/hospitals-photos/crawfurd-hospital.webp";
+import Kpj from "../assets/hospitals-photos/kpj-hospital.webp";
+import Liv from "../assets/hospitals-photos/liv-hospital.webp";
+import Medipol from "../assets/hospitals-photos/medipol-hospital.webp";
+import Guven from "../assets/hospitals-photos/guven.webp";
 
 // --- Mock API data (kept in this file as requested) ---
 const _mockHospitalData = [

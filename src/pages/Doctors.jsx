@@ -4,47 +4,47 @@ import { Award, Search, MapPin, Briefcase, X } from "lucide-react";
 import "./Doctors.css";
 import { Helmet } from "react-helmet";
 // -----------------Mumbai--------------------------------------------------------------
-import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
-import Balkrisnan from "../assets/docters/balakrishna.jpeg";
-import Mohd from "../assets/docters/mohamed-rela.jpeg";
-import Adwani from "../assets/docters/suresh-advani.jpeg";
-import Amit from "../assets/docters/amit-maydeo.jpeg";
-import Kaushal from "../assets/docters/kaushal-pandey.jpeg";
-import Hamdule from "../assets/docters/hamdulay.jpg";
-// import Sudhansu from "../assets/docters/dr-naresh-trehan.jpeg";
-import Abhay from "../assets/docters/abhay-bhave.jpeg";
-import Dinshaw from "../assets/docters/dinshaw-pardiwala.jpg";
-import Shailesh from "../assets/docters/shailesh_raina.jpg";
-import Kamran from "../assets/docters/kamran-khan.jpg";
-import Sanjeev from "../assets/docters/sanjiv-amin.jpg";
-import Fatuque from "../assets/docters/fatuque-udwadia.jpeg";
-import zarir from "../assets/docters/zarir-udwadia.jpeg";
+import Narendra from "../assets/docters/dr-naresh-trehan.webp";
+import Balkrisnan from "../assets/docters/balakrishna.webp";
+import Mohd from "../assets/docters/mohamed-rela.webp";
+import Adwani from "../assets/docters/suresh-advani.webp";
+import Amit from "../assets/docters/amit-maydeo.webp";
+import Kaushal from "../assets/docters/kaushal-pandey.webp";
+import Hamdule from "../assets/docters/hamdulay.webp";
+// import Sudhansu from "../assets/docters/dr-naresh-trehan.webp";
+import Abhay from "../assets/docters/abhay-bhave.webp";
+import Dinshaw from "../assets/docters/dinshaw-pardiwala.webp";
+import Shailesh from "../assets/docters/shailesh_raina.webp";
+import Kamran from "../assets/docters/kamran-khan.webp";
+import Sanjeev from "../assets/docters/sanjiv-amin.webp";
+import Fatuque from "../assets/docters/fatuque-udwadia.webp";
+import zarir from "../assets/docters/zarir-udwadia.webp";
 // -----------------DELHI--------------------------------------------------------------
-import Rakesh from "../assets/docters/rakesh-gupta.jpeg";
-import Soin from "../assets/docters/soin.jpeg";
-import Ashok from "../assets/docters/ashok-rajgopala.jpg";
-import Sandeep from "../assets/docters/sandeep-vaishya.jpeg";
-// import Rajeev from "../assets/docters/dr-naresh-trehan.jpeg";
-import Rohit from "../assets/docters/rohit-bansil.jpg";
+import Rakesh from "../assets/docters/rakesh-gupta.webp";
+import Soin from "../assets/docters/soin.webp";
+import Ashok from "../assets/docters/ashok-rajgopala.webp";
+import Sandeep from "../assets/docters/sandeep-vaishya.webp";
+// import Rajeev from "../assets/docters/dr-naresh-trehan.webp";
+import Rohit from "../assets/docters/rohit-bansil.webp";
 // --------------------------HYDERABAD--------------------------------------------------
-import Nageshwar from "../assets/docters/nageshwar-reddy.jpeg";
-import Gopi from "../assets/docters/gopi-chand.jpeg";
-import Sudheer from "../assets/docters/sudheer-koganti.jpeg";
-import Gurava from "../assets/docters/gurav-reddy.jpg";
-import SKGupta from "../assets/docters/s-k-gupta.jpeg";
-import AVSSuresh from "../assets/docters/AVS-Suresh.jpeg";
+import Nageshwar from "../assets/docters/nageshwar-reddy.webp";
+import Gopi from "../assets/docters/gopi-chand.webp";
+import Sudheer from "../assets/docters/sudheer-koganti.webp";
+import Gurava from "../assets/docters/gurav-reddy.webp";
+import SKGupta from "../assets/docters/s-k-gupta.webp";
+import AVSSuresh from "../assets/docters/AVS-Suresh.webp";
 // ------------------------BANGALORE----------------------------------------------------
-// import DeviPrasad from "../assets/docters/dr-naresh-trehan.jpeg";
-import SandeepN from "../assets/docters/sandeep-nayak.jpeg";
-import Gopinath from "../assets/docters/kodaganur-gopinath.jpeg";
-import Kamini from "../assets/docters/kamini-rao.jpg";
-import Shobha from "../assets/docters/shobha-nandavar.jpeg";
-import Kamal from "../assets/docters/kamal-kiran.jpeg";
-import Venkataram from "../assets/docters/venkataram-mysore.jpg";
-import Anil from "../assets/docters/Anil-kumar.jpg";
+// import DeviPrasad from "../assets/docters/dr-naresh-trehan.webp";
+import SandeepN from "../assets/docters/sandeep-nayak.webp";
+import Gopinath from "../assets/docters/kodaganur-gopinath.webp";
+import Kamini from "../assets/docters/kamini-rao.webp";
+import Shobha from "../assets/docters/shobha-nandavar.webp";
+import Kamal from "../assets/docters/kamal-kiran.webp";
+import Venkataram from "../assets/docters/venkataram-mysore.webp";
+import Anil from "../assets/docters/Anil-kumar.webp";
 // ------------------------CHENNAI-------------------------------------------------------
-import Thiagarajan from "../assets/docters/thiagarajan-srinivasan.jpeg";
-import Vijayan from "../assets/docters/vijayan.jpeg";
+import Thiagarajan from "../assets/docters/thiagarajan-srinivasan.webp";
+import Vijayan from "../assets/docters/vijayan.webp";
 
 const doctors = [
   // -----------------MUMBAI----------------------------------------------
