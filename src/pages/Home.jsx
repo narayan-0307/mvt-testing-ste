@@ -477,6 +477,8 @@ export default function HomePage() {
               <img
                 src={aboutImage}
                 className="about-image-new"
+                loading="lazy"
+                alt="About HumanCare Medical Tourism"
               />
 
               <div className="experience-card-new">
@@ -504,7 +506,14 @@ export default function HomePage() {
             {hospitals.map((hospital, index) => (
               <div className="hospital-card" key={index}>
                 <div className="hospital-image">
-                  <img src={hospital.image} alt={hospital.name} />
+                  <img
+                    src={hospital.image}
+                    alt={hospital.name}
+                    loading="lazy"
+                    width="400"
+                    height="300"
+                    decoding="async"
+                  />
                 </div>
 
                 <h3>{hospital.name}</h3>
@@ -582,7 +591,14 @@ export default function HomePage() {
             {doctors.map((doc, index) => (
               <div className="doctor-card" key={index}>
                 <div className="doctor-image">
-                  <img src={doc.image} alt={doc.name} />
+                  <img
+                    src={doc.image}
+                    alt={doc.name}
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                    decoding="async"
+                  />
                 </div>
 
                 <h3>{doc.name}</h3>

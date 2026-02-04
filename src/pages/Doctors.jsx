@@ -576,7 +576,14 @@ export default function DoctorsPage() {
                 tabIndex={0}
               >
                 <div className="doctor-image">
-                  <img src={doc.image} alt={doc.name} />
+                  <img
+                    src={doc.image}
+                    alt={doc.name}
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                    decoding="async"
+                  />
                 </div>
 
                 <h3>{doc.name}</h3>

@@ -26,7 +26,7 @@ export default function Footer({ onNavigate }) {
               </div> */}
               <div>
                 <Link to="/" className="logo">
-                  <img src={logo} alt="Logo" />
+                  <img src={logo} alt="Logo" loading="lazy" />
                 </Link>
               </div>
             </div>

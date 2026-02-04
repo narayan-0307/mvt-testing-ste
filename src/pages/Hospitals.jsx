@@ -629,7 +629,15 @@ export default function HospitalsPage() {
             >
               <div className="hc-card">
                 <div className="hc-left">
-                  <img src={h.image} alt={h.name} className="hc-thumb" />
+                  <img
+                    src={h.image}
+                    alt={h.name}
+                    className="hc-thumb"
+                    loading="lazy"
+                    width="300"
+                    height="200"
+                    decoding="async"
+                  />
                 </div>
 
                 <div className="hc-middle">

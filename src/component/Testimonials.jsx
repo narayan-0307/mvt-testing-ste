@@ -85,7 +85,7 @@ export default function Testimonials() {
               <p className="review-text">"{review.text}"</p>
 
               <div className="reviewer">
-                <img src={review.img} alt="patient" className="review-img" />
+                <img src={review.img} alt="patient" className="review-img" loading="lazy" />
                 <div>
                   <h4>{review.name}</h4>
                   <span>{review.country}</span>

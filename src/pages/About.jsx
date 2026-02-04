@@ -32,6 +32,14 @@ const images = [about1, about2, about3, about4];
 export default function AboutPage() {
   const [currentImage, setCurrentImage] = useState(0);
 
+  // Preload images
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -162,8 +170,14 @@ export default function AboutPage() {
         </div>
 
         <div className="who-image">
-          <img src={aboutImg} alt="Medical Team" />
-          {/* add image */}
+          <img
+            src={aboutImg}
+            alt="Medical Team"
+            loading="lazy"
+            width="600"
+            height="400"
+            decoding="async"
+          />
         </div>
       </section>
       {/* WHO WE ARE SECTION END */}

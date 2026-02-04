@@ -96,6 +96,7 @@ a {
   gap: 40px;
   align-items: center;
   position: relative;
+  min-height: 600px; /* Prevent layout shift */
 }
 
 .hero-left {
