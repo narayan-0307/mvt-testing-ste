@@ -27,6 +27,8 @@ import about2 from "../assets/about/about-2.webp";
 import about3 from "../assets/about/about-3.webp";
 import about4 from "../assets/about/about-4.webp";
 
+import Breadcrumb from "../component/Breadcrumb";
+
 const images = [about1, about2, about3, about4];
 
 export default function AboutPage() {
@@ -51,19 +53,16 @@ export default function AboutPage() {
     <>
       {/* HELMET START */}
       <Helmet>
-        <title>
-          About HumanCare Medical Tourism | Trusted Medical Travel Company in
-          India
-        </title>
+        <title>Medical Tourism Company India | Trusted Medical Tourism</title>
 
         <meta
           name="description"
-          content="HumanCare Medical Tourism is a trusted medical travel company with 21+ years of experience helping international patients access affordable treatment at top hospitals in India."
+          content="Humancare World Wide is a complete medical tourism portal offering patients worldwide access to the best hospitals, diagnostic centers and super-specialty care for quick, effective and affordable treatment."
         />
 
         <meta
           name="keywords"
-          content="about humancare medical tourism, medical tourism company india, healthcare travel experts, international patient services"
+          content="trusted medical tourism, medical tourism company india, healthcare travel experts, international patient services"
         />
 
         <link
@@ -105,6 +104,8 @@ export default function AboutPage() {
       </section>
       {/* HERO SECTION END */}
 
+      <Breadcrumb currentPage="About" />
+
       {/* STATS SECTION START */}
       <section className="stats-section">
         <div className="stats-container">
@@ -145,7 +146,7 @@ export default function AboutPage() {
       <section className="about-who">
         <div className="who-content">
           <span className="section-badge">Who We Are</span>
-          <h2>Compassionate Care, Global Reach</h2>
+          <h1>Trusted Medical Tourism Company in India</h1>
 
           <p>
             At Humancare Medical Value Travel, we believe quality healthcare

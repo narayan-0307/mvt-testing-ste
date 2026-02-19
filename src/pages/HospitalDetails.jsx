@@ -4,6 +4,7 @@ import { fetchHospitals } from "./Hospitals";
 import "./HospitalDetails.css";
 import { FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import Breadcrumb from "../component/Breadcrumb";
 
 export default function HospitalDetails() {
   const { id } = useParams();
@@ -64,6 +65,12 @@ export default function HospitalDetails() {
         </div>
       </section>
       {/* HERO SECTION END */}
+      <Breadcrumb
+        items={[
+          { label: "Hospitals", to: "/hospitals" },
+          { label: hospital.name },
+        ]}
+      />
 
       {/* HOSPITAL DETAILS SECTION START */}
       <div className="hospital-details-page pro-layout">

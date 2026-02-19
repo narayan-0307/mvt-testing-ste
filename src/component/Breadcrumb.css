@@ -1,0 +1,179 @@
+/* ===========================
+   BREADCRUMB WRAPPER
+=========================== */
+.breadcrumb-wrapper {
+  padding-top: 2rem;
+}
+
+.breadcrumb-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   BREADCRUMB NAVIGATION
+=========================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===========================
+   BREADCRUMB LINK (HOME)
+=========================== */
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #4a90e2;
+  transition: color 0.2s ease;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.breadcrumb-link:hover {
+  color: #0a1754;
+}
+
+.breadcrumb-link .home-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===========================
+   BREADCRUMB SEPARATOR
+=========================== */
+.breadcrumb-separator {
+  color: #999;
+  font-size: 18px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ===========================
+   BREADCRUMB CURRENT PAGE
+=========================== */
+.breadcrumb-current {
+  color: #333;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ===========================
+   LINKABLE SEGMENTS
+=========================== */
+.breadcrumb-link-item {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: 700; /* make clickable segment bold */
+  transition: color 0.15s ease;
+  margin-right: 10px;
+}
+
+.breadcrumb-link-item:hover {
+  color: #0a1754;
+}
+
+.breadcrumb-text {
+  color: #333;
+  font-weight: 500;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .breadcrumb-wrapper {
+    padding-top: 2rem;
+  }
+
+  .breadcrumb {
+    gap: 10px;
+  }
+
+  .breadcrumb-link {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .breadcrumb-link .home-icon {
+    font-size: 20px;
+  }
+
+  .breadcrumb-separator {
+    font-size: 16px;
+  }
+
+  .breadcrumb-current {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .breadcrumb-wrapper {
+    padding-top: 2rem;
+  }
+
+  .breadcrumb {
+    gap: 8px;
+  }
+
+  .breadcrumb-link {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .breadcrumb-link .home-icon {
+    font-size: 18px;
+  }
+
+  .breadcrumb-separator {
+    font-size: 15px;
+  }
+
+  .breadcrumb-current {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .breadcrumb-wrapper {
+    padding-top: 2rem;
+  }
+
+  .breadcrumb-container {
+    padding: 0 15px;
+  }
+
+  .breadcrumb {
+    gap: 6px;
+  }
+
+  .breadcrumb-link {
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .breadcrumb-link .home-icon {
+    font-size: 16px;
+  }
+
+  .breadcrumb-separator {
+    font-size: 14px;
+  }
+
+  .breadcrumb-current {
+    font-size: 14px;
+  }
+}

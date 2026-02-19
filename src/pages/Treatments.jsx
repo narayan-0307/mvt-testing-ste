@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   HeartPulse,
   Bone,
@@ -10,10 +9,11 @@ import {
   Sparkles,
   Eye,
   Phone,
-  MessageCircle,
 } from "lucide-react";
 import "./Treatments.css";
 import { Helmet } from "react-helmet";
+
+import Breadcrumb from "../component/Breadcrumb";
 
 const treatments = [
   {
@@ -120,13 +120,11 @@ export default function TreatmentsPage() {
     <>
       {/* HELMET SECTION START */}
       <Helmet>
-        <title>
-          Medical Treatments in India | Affordable Procedures - HumanCare
-        </title>
+        <title>Medical Treatment in India | Advanced Healthcare</title>
 
         <meta
           name="description"
-          content="Explore a wide range of medical treatments in India including cardiology, oncology, orthopedics, neurology and more. Affordable care at top hospitals with HumanCare."
+          content="Explore advanced medical treatments in India including cardiology, neurology, oncology, dental care, ophthalmology and cosmetic surgery at top hospitals."
         />
 
         <meta
@@ -145,7 +143,7 @@ export default function TreatmentsPage() {
       <section className="treatments-hero">
         <div>
           <span className="hero-badge-treatment">Medical Specialties</span>
-          <h1>World-Class Treatments at Affordable Prices</h1>
+          <h1>Advanced Medical Treatments</h1>
           <p>
             Access India's finest specialists and cutting-edge medical
             technology at a fraction of Western costs
@@ -153,6 +151,8 @@ export default function TreatmentsPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+       <Breadcrumb currentPage="Treatments" />
 
       {/* TREATMENTS SECTION START */}
       <section className="treatments-section">
@@ -178,14 +178,6 @@ export default function TreatmentsPage() {
                   ))}
                 </ul>
               </div>
-
-              {/* <div className="card-bottom">
-                <div>
-                  <small>Starting from</small>
-                  <strong>{item.price}</strong>
-                </div>
-                <span className="saving">{item.savings}</span>
-              </div> */}
             </div>
           ))}
         </div>
@@ -220,13 +212,13 @@ export default function TreatmentsPage() {
       {/* WHY INDIA SECTION END */}
 
       {/* CTA SECTION START */}
-      <section className="about-cta">
+      <section className="treatments-cta">
         <h2>Ready to Begin Your Healthcare Journey?</h2>
         <p>
           Let our expert team guide you to the best medical treatment in India
         </p>
 
-        <a href="tel:+919833166697" className="cta-button">
+        <a href="tel:+919833166697" className="treatments-cta-button">
           <Phone />
           Contact Us Today
         </a>

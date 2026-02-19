@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
+import Breadcrumb from "../component/Breadcrumb";
 
 const services = [
   {
@@ -93,19 +94,16 @@ export default function ServicesPage() {
     <>
       {/* HELMET SECTION START */}
       <Helmet>
-        <title>
-          Medical Tourism Services | Complete Healthcare Travel Support -
-          HumanCare
-        </title>
+        <title>Medical Tourism Services | Healthcare Services India</title>
 
         <meta
           name="description"
-          content="Explore HumanCare Medical Tourism services including medical consultation, hospital & doctor selection, visa assistance, travel booking, and post-treatment follow-up."
+          content="Humancare World Wide is a complete medical tourism portal offering patients worldwide access to the best hospitals, diagnostic centers and super-specialty care for quick, effective and affordable treatment."
         />
 
         <meta
           name="keywords"
-          content="medical tourism services, healthcare travel support, medical consultation india, hospital selection service, visa assistance medical travel"
+          content="medical tourism services, healthcare services india, healthcare travel support, medical consultation india, hospital selection service, visa assistance medical travel"
         />
 
         <link
@@ -119,7 +117,7 @@ export default function ServicesPage() {
       <section className="services-hero">
         <div>
           <span className="services-hero-badge">Our Services</span>
-          <h1>Complete Medical Travel Support</h1>
+          <h1>Our Medical Tourism & Healthcare Services</h1>
           <p>
             We provide end-to-end medical travel assistance, including treatment
             coordination, hospital support, travel planning, and post-care
@@ -128,6 +126,8 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+      <Breadcrumb currentPage="Services" />
 
       {/* SERVICES SECTION START */}
       <section className="services-section">
