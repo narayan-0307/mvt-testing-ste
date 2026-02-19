@@ -497,6 +497,8 @@ const _mockHospitalData = [
   },
 ];
 
+import Breadcrumb from "../component/Breadcrumb";
+
 // simple in-file 'API' that returns hospital data (simulates async)
 const fetchHospitals = async () => {
   return new Promise((resolve) => {
@@ -599,6 +601,7 @@ export default function HospitalsPage() {
       </section>
       {/* HERO SECTION END */}
 
+       <Breadcrumb currentPage="Hospitals" />
       {/* LOCATION TABS START */}
       <div className="location-tabs">
         <div className="tabs-inner">

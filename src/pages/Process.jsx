@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import "./Process.css";
 import { Helmet } from "react-helmet";
+import Breadcrumb from "../component/Breadcrumb";
 
 const steps = [
   {
@@ -169,6 +170,8 @@ export default function PatientProcessPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+       <Breadcrumb currentPage="Process" />
 
       {/* PROCESS SECTION START */}
       <section className="process-section">

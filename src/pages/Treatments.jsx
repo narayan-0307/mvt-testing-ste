@@ -13,6 +13,8 @@ import {
 import "./Treatments.css";
 import { Helmet } from "react-helmet";
 
+import Breadcrumb from "../component/Breadcrumb";
+
 const treatments = [
   {
     icon: HeartPulse,
@@ -149,6 +151,8 @@ export default function TreatmentsPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+       <Breadcrumb currentPage="Treatments" />
 
       {/* TREATMENTS SECTION START */}
       <section className="treatments-section">

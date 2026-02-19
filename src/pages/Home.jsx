@@ -272,6 +272,8 @@ const testimonials = [
   },
 ];
 
+import Breadcrumb from "../component/Breadcrumb";
+
 export default function HomePage() {
   return (
     <>
@@ -425,6 +427,8 @@ export default function HomePage() {
           </div>
         </section>
         {/* HERO SECTION end  */}
+
+        <Breadcrumb currentPage="" />
 
         {/* ABOUT  start*/}
         <section className="about">

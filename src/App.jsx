@@ -71,9 +71,7 @@ function App() {
           <Translate />
         </Suspense>
       )}
-
       <Header />
-
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -94,7 +92,6 @@ function App() {
           <Route path="/treatment-in-india" element={<MedicalTourismIndia />} />
         </Routes>
       </Suspense>
-
       <Footer />
       <ConnectWithUs />
       <ConnectWithUsCall />

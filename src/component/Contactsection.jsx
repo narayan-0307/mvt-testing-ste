@@ -2,6 +2,8 @@ import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import "./Contactsection.css";
 
+import Breadcrumb from "../component/Breadcrumb";
+
 const WhatsAppIcon = ({ size = 40 }) => (
   <svg
     width={size}
@@ -55,124 +57,127 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="contact-wrapper">
-      <div className="contact-grid">
-        <div className="contact-left">
-          <h2 className="contact-title">Contact Us</h2>
-          <p className="contact-desc">
-            For non-emergency inquiries, quotes, or questions, please use the
-            form. For immediate medical emergencies, call our 24/7 dispatch
-            line.
-          </p>
+    <>
+      <Breadcrumb currentPage="Contact Us" />
+      <section className="contact-wrapper">
+        <div className="contact-grid">
+          <div className="contact-left">
+            <h2 className="contact-title">Contact Us</h2>
+            <p className="contact-desc">
+              For non-emergency inquiries, quotes, or questions, please use the
+              form. For immediate medical emergencies, call our 24/7 dispatch
+              line.
+            </p>
 
-          <a
-            className="contact-card emergency"
-            href="tel:+919833166697"
-            aria-label="Call Emergency +919833166697"
-          >
-            <Phone className="contact-icon red" />
-            <div>
-              <h4>Emergency 24/7</h4>
-              <p>+91 98331 66697</p>
-            </div>
-          </a>
+            <a
+              className="contact-card emergency"
+              href="tel:+919833166697"
+              aria-label="Call Emergency +919833166697"
+            >
+              <Phone className="contact-icon red" />
+              <div>
+                <h4>Emergency 24/7</h4>
+                <p>+91 98331 66697</p>
+              </div>
+            </a>
 
-          <a
-            className="contact-card whatsapp"
-            href="https://wa.me/919833166697"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat on WhatsApp +91 98331 66697"
-          >
-            <WhatsAppIcon className="contact-icon green" />
-            <div>
-              <h4>Whatsapp Us</h4>
-              <p>+91 98331 66697</p>
-            </div>
-          </a>
+            <a
+              className="contact-card whatsapp"
+              href="https://wa.me/919833166697"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp +91 98331 66697"
+            >
+              <WhatsAppIcon className="contact-icon green" />
+              <div>
+                <h4>Whatsapp Us</h4>
+                <p>+91 98331 66697</p>
+              </div>
+            </a>
 
-          <a
-            className="contact-card email"
-            href="mailto:medicaltourism@humancareworldwide.com"
-            aria-label="Email General Inquiries"
-          >
-            <Mail className="contact-icon blue" />
-            <div>
-              <h4>General Inquiries</h4>
-              <p>medicaltourism@humancareworldwide.com</p>
-            </div>
-          </a>
+            <a
+              className="contact-card email"
+              href="mailto:medicaltourism@humancareworldwide.com"
+              aria-label="Email General Inquiries"
+            >
+              <Mail className="contact-icon blue" />
+              <div>
+                <h4>General Inquiries</h4>
+                <p>medicaltourism@humancareworldwide.com</p>
+              </div>
+            </a>
 
-          <div className="contact-card address">
-            <MapPin className="contact-icon gray" />
-            <div>
-              <h4>Headquarters</h4>
-              <p>
-                544, Dheeraj Haritage, S. V. Road, Junction, Milan Subway,
-                Santacruz (West), Mumbai, Maharashtra 400054
-              </p>
+            <div className="contact-card address">
+              <MapPin className="contact-icon gray" />
+              <div>
+                <h4>Headquarters</h4>
+                <p>
+                  544, Dheeraj Haritage, S. V. Road, Junction, Milan Subway,
+                  Santacruz (West), Mumbai, Maharashtra 400054
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="contact-right">
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-
-            <input
-              type="text"
-              placeholder="Your Phone Number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-
-            <input
-              type="text"
-              placeholder="Nationality"
-              value={nationality}
-              onChange={(e) => setNationality(e.target.value)}
-            />
-
-            <textarea
-              rows="5"
-              placeholder="Your Concern"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-
-            <label className="file-input">
-              Upload Medical Reports
+          <div className="contact-right">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <input
-                type="file"
-                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                onChange={(e) => setAttachment(e.target.files[0] || null)}
-                hidden
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
-            </label>
 
-            {attachment && <p className="file-name">{attachment.name}</p>}
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
 
-            <button type="submit" className="submit-btn">
-              Send Request
-            </button>
-          </form>
+              <input
+                type="text"
+                placeholder="Your Phone Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+
+              <input
+                type="text"
+                placeholder="Nationality"
+                value={nationality}
+                onChange={(e) => setNationality(e.target.value)}
+              />
+
+              <textarea
+                rows="5"
+                placeholder="Your Concern"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+
+              <label className="file-input">
+                Upload Medical Reports
+                <input
+                  type="file"
+                  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                  onChange={(e) => setAttachment(e.target.files[0] || null)}
+                  hidden
+                />
+              </label>
+
+              {attachment && <p className="file-name">{attachment.name}</p>}
+
+              <button type="submit" className="submit-btn">
+                Send Request
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

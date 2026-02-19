@@ -415,6 +415,8 @@ const doctors = [
   },
 ];
 
+import Breadcrumb from "../component/Breadcrumb";
+
 export default function DoctorsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -506,6 +508,8 @@ export default function DoctorsPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+       <Breadcrumb currentPage="Doctors" />
 
       {/* FILTER BAR SECTION START */}
       <div className="filter-bar">

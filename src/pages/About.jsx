@@ -27,6 +27,8 @@ import about2 from "../assets/about/about-2.webp";
 import about3 from "../assets/about/about-3.webp";
 import about4 from "../assets/about/about-4.webp";
 
+import Breadcrumb from "../component/Breadcrumb";
+
 const images = [about1, about2, about3, about4];
 
 export default function AboutPage() {
@@ -101,6 +103,8 @@ export default function AboutPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+      <Breadcrumb currentPage="About" />
 
       {/* STATS SECTION START */}
       <section className="stats-section">

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
+import Breadcrumb from "../component/Breadcrumb";
 
 const services = [
   {
@@ -125,6 +126,8 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* HERO SECTION END */}
+
+      <Breadcrumb currentPage="Services" />
 
       {/* SERVICES SECTION START */}
       <section className="services-section">
