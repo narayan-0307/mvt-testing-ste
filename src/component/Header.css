@@ -4,6 +4,7 @@
   top: 0;
   z-index: 10060; /* raised so header controls sit above floating widgets */
   width: 100%;
+  overflow: hidden; /* Prevent header items from going outside */
 }
 /* Social icons and link styles (used in header and mobile blocks) */
 .social-links {
@@ -44,6 +45,7 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .navbar-scrolled {
@@ -54,9 +56,9 @@
 /* CONTAINER */
 .navbar-container {
   width: 100%;
-  max-width: 1800px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 24px;
 }
 
 /* INNER */
@@ -65,22 +67,29 @@
   justify-content: space-between;
   align-items: center;
   height: 84px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* LOGO */
 .logo {
   flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .logo img {
   height: 52px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* header controls: social icons + language select aligned to the right */
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
 .lang-select {
@@ -117,8 +126,10 @@
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
   white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 /* NAVBAR SOCIAL ICONS (right side of navbar) */
@@ -239,7 +250,25 @@
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .nav-desktop {
-    gap: 28px;
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .nav-desktop {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 16px;
   }
 }
 
