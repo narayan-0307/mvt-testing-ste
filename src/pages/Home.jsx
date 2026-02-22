@@ -659,8 +659,8 @@ export default function HomePage() {
             </div>
 
             {/* <button className="choose-btn">
-      Learn More →
-    </button> */}
+              Learn More →
+            </button> */}
           </div>
         </section>
         {/* WHY CHOOSE US end*/}
